@@ -1,0 +1,17 @@
+{
+  "name": "EDU VIDEO AI",
+  "short_name": "EDU VIDEO AI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#1769e0",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "https://flaticon.com",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

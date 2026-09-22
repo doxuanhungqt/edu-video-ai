@@ -318,3 +318,86 @@ getEl("loginBtn").onclick = login;
 if(getEl("generateBtn")) getEl("generateBtn").onclick = generate;
 getEl("logoutBtn").onclick = async function() { if (sb) await sb.auth.signOut(); currentUser = null; getEl("gate").classList.remove("hidden"); getEl("app").classList.add("hidden"); getEl("logoutBtn").classList.add("hidden"); };
 if (sb) sb.auth.getSession().then(async function(res) { if (res.data?.session) { currentUser = res.data.session.user; const p = await sb.from("profiles").select("*").eq("id", currentUser.id).maybeSingle(); showApp(p.data); } });
+// Copy toàn bộ Storyboard Prompt
+if(getEl("copyPromptBtn")){
+  getEl("copyPromptBtn").onclick = function(){
+
+    const content = getEl("output").innerText;
+
+    navigator.clipboard.writeText(content);
+
+    alert("✅ Đã sao chép toàn bộ Prompt Storyboard!");
+
+  };
+}
+// Mở Canva với Prompt hình ảnh
+if(getEl("canvaBtn")){
+  getEl("canvaBtn").onclick = function(){
+
+    const prompt = getEl("output").innerText;
+
+    const url = "https://www.canva.com/ai-image-generator/";
+
+    window.open(url, "_blank");
+
+    alert("🎨 Đã mở Canva. Hãy dán Prompt Storyboard để tạo ảnh.");
+
+  };
+}
+// Mở Kling AI với Prompt video
+if(getEl("klingBtn")){
+  getEl("klingBtn").onclick = function(){
+
+    const prompt = getEl("output").innerText;
+
+    const url = "https://klingai.com/";
+
+    window.open(url, "_blank");
+
+    alert("🎬 Đã mở Kling AI. Hãy dán Prompt video Storyboard.");
+
+  };
+}
+// Mở CapCut với Prompt video
+if(getEl("capcutBtn")){
+  getEl("capcutBtn").onclick = function(){
+
+    const prompt = getEl("output").innerText;
+
+    const url = "https://www.capcut.com/";
+
+    window.open(url, "_blank");
+
+    alert("🎞 Đã mở CapCut. Hãy dùng Storyboard để dựng video.");
+
+  };
+}
+// Xuất Word Storyboard
+if(getEl("wordBtn")){
+  getEl("wordBtn").onclick = function(){
+
+    const content = getEl("output").innerText;
+
+    const blob = new Blob(
+      [
+        "\ufeff" + content
+      ],
+      {
+        type: "application/msword"
+      }
+    );
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "EDU-VIDEO-AI-Storyboard.doc";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+    alert("📄 Đã xuất Word Storyboard!");
+
+  };
+}

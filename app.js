@@ -175,7 +175,12 @@ i === 1
 : "Các em hãy cùng tìm hiểu nội dung tiếp theo về " + topic + ". Hãy quan sát, thực hành và ghi nhớ những kiến thức quan trọng."
 }
 </p>
-
+<p>
+🎵 <b>Âm thanh:</b><br>
+Nhạc nền phù hợp với nội dung giáo dục,
+âm thanh môi trường tự nhiên,
+tạo cảm giác tích cực và hứng thú cho học sinh.
+</p>
 </div>
 `;
 

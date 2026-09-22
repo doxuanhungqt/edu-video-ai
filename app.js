@@ -30,6 +30,32 @@ function generate() {
   const subject = getEl("subject").value;
   const grade = getEl("grade").value;
   const audience = getEl("audience").value;
+  let audienceStyle = "";
+
+if (audience.includes("Mầm non")) {
+  audienceStyle =
+  "Use colorful cartoon style, simple language, cute characters, playful learning atmosphere.";
+}
+
+else if (audience.includes("Tiểu học")) {
+  audienceStyle =
+  "Use friendly educational style, bright colors, simple explanations, engaging student interaction.";
+}
+
+else if (audience.includes("THCS")) {
+  audienceStyle =
+  "Use scientific educational style, clear explanation, teacher-guided learning, realistic school environment.";
+}
+
+else if (audience.includes("THPT")) {
+  audienceStyle =
+  "Use academic style, deeper explanation, critical thinking, professional educational presentation.";
+}
+
+else if (audience.includes("Giáo viên")) {
+  audienceStyle =
+  "Use professional teacher training style, clear structure, educational presentation.";
+}
   const topic = getEl("topic").value;
   const purpose = getEl("purpose").value;
  const durationText = getEl("duration").value;
@@ -145,6 +171,9 @@ bright and friendly classroom atmosphere.
 
 Visual style:
 ${style}
+
+Audience adaptation:
+${audienceStyle}
 
 Aspect ratio:
 ${ratio}

@@ -32,6 +32,41 @@ function generate() {
   const audience = getEl("audience").value;
   let audienceStyle = "";
 let recommendedVoice = "";
+  let subjectStyle = "";
+  if (subject.includes("Tiếng Anh")) {
+
+  subjectStyle =
+  "English classroom, students practicing conversation, vocabulary cards, friendly interaction.";
+
+}
+
+else if (subject.includes("Toán")) {
+
+  subjectStyle =
+  "Mathematics classroom, numbers, formulas, diagrams, teacher explaining.";
+
+}
+
+else if (subject.includes("Khoa học")) {
+
+  subjectStyle =
+  "Science experiment, laboratory, students observing and discovering.";
+
+}
+
+else if (subject.includes("Thể chất")) {
+
+  subjectStyle =
+  "School playground, students exercising, sports uniform, dynamic movement.";
+
+}
+
+else if (subject.includes("Mầm non")) {
+
+  subjectStyle =
+  "Cute children, colorful classroom, playful educational illustration.";
+
+}
 if (audience.includes("Mầm non")) {
 
   audienceStyle =
@@ -132,6 +167,7 @@ imagePrompt =
 "Topic: " + topic + ". " +
 "Grade: " + grade + ". " +
 "Audience: " + audience + ". " +
+  "Subject style: " + subjectStyle + ". " +
 "Characters: Vietnamese students and teacher. " +
 "Location: Vietnamese school environment. " +
 "Style: " + style + ". " +

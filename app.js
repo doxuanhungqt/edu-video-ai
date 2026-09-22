@@ -168,10 +168,13 @@ imagePrompt =
 "Grade: " + grade + ". " +
 "Audience: " + audience + ". " +
   "Subject style: " + subjectStyle + ". " +
-"Characters: Vietnamese students and teacher. " +
+"Characters: Vietnamese students, appropriate age, suitable school uniforms, happy expressions, natural poses, teacher guiding students. " +
 "Location: Vietnamese school environment. " +
 "Style: " + style + ". " +
-"High quality educational illustration, clear details, suitable for Canva AI.";
+"Camera: medium shot, eye-level view, clear subject focus. " +
+"Lighting: natural daylight, warm and friendly atmosphere. " +
+"High quality educational illustration, clear details, suitable for Canva AI. " +
+"Negative prompt: blurry image, distorted faces, extra fingers, wrong anatomy, low quality.";
 const role = sceneRoles[(i - 1) % sceneRoles.length];
     storyboard += `
 <div class="scene">

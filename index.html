@@ -110,12 +110,31 @@
       <div class="grid">
         <div><label>Môn học</label><input id="subject" value="Giáo dục thể chất"></div>
         <div><label>Khối lớp</label><input id="grade" value="7"></div>
+        <div>
+<label>👥 Đối tượng học sinh</label>
+<select id="audience">
+
+<option>Mầm non (3-5 tuổi)</option>
+<option>Tiểu học lớp 1-2</option>
+<option>Tiểu học lớp 3-5</option>
+<option selected>THCS lớp 6-9</option>
+<option>THPT lớp 10-12</option>
+<option>Giáo viên</option>
+
+</select>
+</div>
         <div class="wide"><label>Chủ đề</label><input id="topic" value="Phòng chống đuối nước"></div>
         <div><div><label>Mục đích</label><select id="purpose"><option>Tuyên truyền giáo dục</option><option>Dạy học trên lớp</option><option>Hoạt động trải nghiệm</option><option>Chào cờ / truyền thông</option></select></div></div>
         <div><label>Thời lượng</label><select id="duration"><option>60 giây</option><option>90 giây</option><option>2 phút</option><option>3 phút</option></select></div>
         <div><label>Tỷ lệ</label><select id="ratio"><option>16:9</option><option>9:16</option><option>1:1</option></select></div>
         <div><label>Phong cách</label><select id="style"><option>Điện ảnh, chân thực, giàu cảm xúc</option><option>Hoạt hình 3D giáo dục</option><option>Hiện đại, năng động</option><option>Trang trọng, học đường</option></select></div>
-        <div><label>Giọng đọc</label><select id="voice"><option>Nữ tiếng Việt</option><option>Nam tiếng Việt</option><option>Không lời</option></select></div>
+        <div><label>Giọng đọc</label><select id="voice"><<option>👩 Nữ giáo viên Việt Nam</option>
+<option>👨 Nam giáo viên Việt Nam</option>
+<option>👧 Bé gái Việt Nam</option>
+<option>👦 Bé trai Việt Nam</option>
+<option>👥 Nhóm học sinh đối thoại</option>
+<option>🎤 Người dẫn chương trình thiếu nhi</option>
+<option>🎵 Không lời</option>></select></div>
         <div class="wide"><label>Yêu cầu thêm</label><textarea id="extra" rows="4" placeholder="Ví dụ: có cảnh trường học Việt Nam, chữ trên màn hình rõ, không dùng hình ảnh nguy hiểm..."></textarea></div>
       </div>
       <button id="generateBtn" class="primary">✨ Tạo kịch bản & Prompt video</button>

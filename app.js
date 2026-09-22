@@ -131,7 +131,7 @@ Giới thiệu nội dung cảnh ${i} về ${topic}.
 
 
   getEl("output").classList.remove("hidden");
-
+getEl("output").innerHTML += storyboard;
 
   if (sb && currentUser) {
 

@@ -29,6 +29,7 @@ function generate() {
 
   const subject = getEl("subject").value;
   const grade = getEl("grade").value;
+  const audience = getEl("audience").value;
   const topic = getEl("topic").value;
   const purpose = getEl("purpose").value;
  const durationText = getEl("duration").value;
@@ -122,6 +123,9 @@ ${role}
 
 Educational level:
 Grade ${grade}
+
+Audience:
+${audience}
 
 Location:
 Vietnamese school environment, suitable for students.

@@ -114,6 +114,7 @@ if(durationText.includes("phút")){
   const timePerScene = Math.floor(duration / scenes);
 
   let storyboard = "";
+  let imagePrompt = "";
 const sceneRoles = [
   "Khởi động – tạo hứng thú",
   "Khám phá kiến thức mới",
@@ -126,7 +127,15 @@ const sceneRoles = [
 
     const start = (i - 1) * timePerScene;
     const end = i * timePerScene;
-
+imagePrompt =
+"Educational image scene " + i + ". " +
+"Topic: " + topic + ". " +
+"Grade: " + grade + ". " +
+"Audience: " + audience + ". " +
+"Characters: Vietnamese students and teacher. " +
+"Location: Vietnamese school environment. " +
+"Style: " + style + ". " +
+"High quality educational illustration, clear details, suitable for Canva AI.";
 const role = sceneRoles[(i - 1) % sceneRoles.length];
     storyboard += `
 <div class="scene">
@@ -155,6 +164,10 @@ Trình bày nội dung ${topic} cho học sinh lớp ${grade}.
 Minh họa ${topic}, phong cách ${style}.
 </p>
 
+<p>
+🎨 <b>Prompt tạo ảnh Canva:</b><br>
+${imagePrompt}
+</p>
 <p>
 🎥 <b>Prompt video AI:</b>
 </p>

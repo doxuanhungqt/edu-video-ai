@@ -31,7 +31,17 @@ function generate() {
   const grade = getEl("grade").value;
   const topic = getEl("topic").value;
   const purpose = getEl("purpose").value;
-  const duration = Number(getEl("duration").value);
+ const durationText = getEl("duration").value;
+
+let duration = 60;
+
+if(durationText.includes("giây")){
+  duration = Number(durationText.replace("giây","").trim());
+}
+
+if(durationText.includes("phút")){
+  duration = Number(durationText.replace("phút","").trim()) * 60;
+}
   const ratio = getEl("ratio").value;
   const style = getEl("style").value;
   const voice = getEl("voice").value;

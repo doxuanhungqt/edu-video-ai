@@ -26,11 +26,122 @@ async function login() {
 }
 
 function generate() {
-  const subject = getEl("subject").value, grade = getEl("grade").value, topic = getEl("topic").value, purpose = getEl("purpose").value, duration = getEl("duration").value, ratio = getEl("ratio").value, style = getEl("style").value, voice = getEl("voice").value, extra = getEl("extra").value;
-  const prompt = "Create a " + duration + " educational video about " + topic + ", grade " + grade + ", style " + style + ". Purpose: " + purpose + ". Voice: " + voice + ". Ratio: " + ratio + ". " + extra;
-  getEl("output").innerHTML = "<h2>Kịch bản tổng nạp vào AI</h2><div class='prompt'>" + prompt + "</div>";
+
+  const subject = getEl("subject").value;
+  const grade = getEl("grade").value;
+  const topic = getEl("topic").value;
+  const purpose = getEl("purpose").value;
+  const duration = Number(getEl("duration").value);
+  const ratio = getEl("ratio").value;
+  const style = getEl("style").value;
+  const voice = getEl("voice").value;
+  const extra = getEl("extra").value;
+
+
+  let scenes = 5;
+
+  if (duration <= 15) {
+    scenes = 3;
+  } else if (duration <= 60) {
+    scenes = 5;
+  } else if (duration <= 120) {
+    scenes = 10;
+  } else if (duration <= 180) {
+    scenes = 15;
+  } else {
+    scenes = 20;
+  }
+
+
+  const timePerScene = Math.floor(duration / scenes);
+
+  let storyboard = "";
+
+
+  for (let i = 1; i <= scenes; i++) {
+
+    const start = (i - 1) * timePerScene;
+    const end = i * timePerScene;
+
+
+    storyboard += `
+<div class="scene">
+
+<h3>🎬 Cảnh ${i} (${start}s - ${end}s)</h3>
+
+<p>
+🎯 <b>Mục tiêu:</b><br>
+Trình bày nội dung ${topic} cho học sinh lớp ${grade}.
+</p>
+
+<p>
+🖼 <b>Hình ảnh gợi ý:</b><br>
+Minh họa ${topic}, phong cách ${style}.
+</p>
+
+<p>
+🎥 <b>Prompt video AI:</b>
+</p>
+
+<div class="prompt">
+Educational video scene ${i},
+topic: ${topic},
+grade: ${grade},
+style: ${style},
+ratio: ${ratio},
+Vietnamese educational environment.
+
+${extra}
+</div>
+
+
+<p>
+🎙 <b>Lời thoại:</b><br>
+Giọng ${voice}: 
+Giới thiệu nội dung cảnh ${i} về ${topic}.
+</p>
+
+</div>
+`;
+
+  }
+
+
+  getEl("output").innerHTML =
+  `
+<h2>🎬 STORYBOARD AI</h2>
+
+<p>
+📚 Môn: ${subject}<br>
+🎓 Lớp: ${grade}<br>
+⏱ Thời lượng: ${duration} giây<br>
+🎞 Số cảnh: ${scenes}
+</p>
+`;
+
+
   getEl("output").classList.remove("hidden");
-  if (sb && currentUser) sb.from("videos").insert({ title: topic, subject, grade, topic, level: "Giáo dục", description: purpose, prompt, duration, scene_count: 5, status: "DRAFT" }).then(() => loadVideos());
+
+
+  if (sb && currentUser) {
+
+    sb.from("videos").insert({
+
+      title: topic,
+      subject,
+      grade,
+      topic,
+      level: "Giáo dục",
+      description: purpose,
+      prompt: storyboard,
+      duration,
+      scene_count: scenes,
+      status: "DRAFT"
+
+    }).then(() => loadVideos());
+
+  }
+
 }
 
 async function loadVideos() {

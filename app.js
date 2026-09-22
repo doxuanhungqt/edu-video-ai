@@ -66,19 +66,37 @@ if(durationText.includes("phút")){
   const timePerScene = Math.floor(duration / scenes);
 
   let storyboard = "";
-
+const sceneRoles = [
+  "Khởi động – tạo hứng thú",
+  "Khám phá kiến thức mới",
+  "Minh họa và hướng dẫn",
+  "Thực hành trải nghiệm",
+  "Tổng kết và ghi nhớ"
+];
 
   for (let i = 1; i <= scenes; i++) {
 
     const start = (i - 1) * timePerScene;
     const end = i * timePerScene;
 
-
+const role = sceneRoles[(i - 1) % sceneRoles.length];
     storyboard += `
 <div class="scene">
 
 <h3>🎬 Cảnh ${i} (${start}s - ${end}s)</h3>
+<p>
+🎬 <b>Vai trò cảnh:</b><br>
+${role}
+</p>
+<p>
+🏫 <b>Bối cảnh:</b><br>
+Môi trường giáo dục Việt Nam, phù hợp với học sinh lớp ${grade}.
+</p>
 
+<p>
+👥 <b>Nhân vật:</b><br>
+Học sinh Việt Nam đúng độ tuổi, giáo viên hướng dẫn, biểu cảm tự nhiên.
+</p>
 <p>
 🎯 <b>Mục tiêu:</b><br>
 Trình bày nội dung ${topic} cho học sinh lớp ${grade}.
@@ -94,21 +112,68 @@ Minh họa ${topic}, phong cách ${style}.
 </p>
 
 <div class="prompt">
-Educational video scene ${i},
-topic: ${topic},
-grade: ${grade},
-style: ${style},
-ratio: ${ratio},
-Vietnamese educational environment.
+Educational cinematic video scene ${i}.
 
+Topic:
+${topic}
+
+Scene role:
+${role}
+
+Educational level:
+Grade ${grade}
+
+Location:
+Vietnamese school environment, suitable for students.
+
+Characters:
+Vietnamese students and teacher, correct age,
+natural expressions and movements.
+
+Camera:
+Smooth camera movement,
+wide shot and close-up shots,
+cinematic educational style.
+
+Lighting:
+Natural daylight,
+bright and friendly classroom atmosphere.
+
+Visual style:
+${style}
+
+Aspect ratio:
+${ratio}
+
+Motion:
+Natural human movement,
+realistic animation,
+clear educational demonstration.
+
+Negative prompt:
+No violence,
+no unsafe actions,
+no distorted faces,
+no unrealistic characters.
+
+Additional requirements:
 ${extra}
 </div>
 
 
 <p>
 🎙 <b>Lời thoại:</b><br>
-Giọng ${voice}: 
-Giới thiệu nội dung cảnh ${i} về ${topic}.
+Giọng ${voice}:
+
+${
+i === 1 
+? "Xin chào các em. Hôm nay chúng ta cùng khám phá " + topic + ". Hãy chú ý quan sát và tham gia hoạt động nhé."
+
+: i === scenes
+? "Qua bài học hôm nay, các em đã hiểu được những kiến thức quan trọng về " + topic + ". Hãy vận dụng vào thực tế."
+
+: "Các em hãy cùng tìm hiểu nội dung tiếp theo về " + topic + ". Hãy quan sát, thực hành và ghi nhớ những kiến thức quan trọng."
+}
 </p>
 
 </div>

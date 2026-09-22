@@ -31,30 +31,51 @@ function generate() {
   const grade = getEl("grade").value;
   const audience = getEl("audience").value;
   let audienceStyle = "";
-
+let recommendedVoice = "";
 if (audience.includes("Mầm non")) {
+
   audienceStyle =
   "Use colorful cartoon style, simple language, cute characters, playful learning atmosphere.";
+
+  recommendedVoice =
+  "👧 Bé gái Việt Nam hoặc 👦 Bé trai Việt Nam, giọng vui tươi, hồn nhiên.";
 }
 
 else if (audience.includes("Tiểu học")) {
+
   audienceStyle =
   "Use friendly educational style, bright colors, simple explanations, engaging student interaction.";
+
+  recommendedVoice =
+  "👧 Bé gái Việt Nam hoặc 🎤 Người dẫn chương trình thiếu nhi, giọng trong sáng, thân thiện.";
+
 }
 
 else if (audience.includes("THCS")) {
+
   audienceStyle =
   "Use scientific educational style, clear explanation, teacher-guided learning, realistic school environment.";
+
+  recommendedVoice =
+  "👩 Nữ giáo viên Việt Nam hoặc 👨 Nam giáo viên Việt Nam, giọng rõ ràng, truyền cảm.";
+
 }
 
 else if (audience.includes("THPT")) {
   audienceStyle =
   "Use academic style, deeper explanation, critical thinking, professional educational presentation.";
+  recommendedVoice =
+"👨 Nam giáo viên Việt Nam hoặc 👩 Nữ giáo viên Việt Nam, giọng chuyên nghiệp, truyền cảm.";
 }
 
 else if (audience.includes("Giáo viên")) {
+
   audienceStyle =
   "Use professional teacher training style, clear structure, educational presentation.";
+
+  recommendedVoice =
+  "👩 Nữ giáo viên Việt Nam hoặc 👨 Nam giáo viên Việt Nam, giọng chuyên nghiệp, rõ ràng.";
+
 }
   const topic = getEl("topic").value;
   const purpose = getEl("purpose").value;
@@ -174,6 +195,9 @@ ${style}
 
 Audience adaptation:
 ${audienceStyle}
+
+Recommended voice:
+${recommendedVoice}
 
 Aspect ratio:
 ${ratio}

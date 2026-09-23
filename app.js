@@ -166,6 +166,11 @@ const sceneRoles = [
     let sceneImageStyle = "";
     let scenePurpose = "";
     let learningObjective = "";
+let teacherActivity = "";
+
+let studentActivity = "";
+
+let learningProduct = "";
     if(role.includes("Khởi động")) {
 
   sceneImageStyle =
@@ -174,6 +179,14 @@ const sceneRoles = [
 }
 scenePurpose =
 "Gây hứng thú, tạo kết nối và giới thiệu bài học.";
+    teacherActivity =
+"Giáo viên giới thiệu chủ đề, tạo tình huống mở đầu và đặt câu hỏi gợi mở.";
+
+studentActivity =
+"Học sinh quan sát, lắng nghe và chia sẻ hiểu biết ban đầu.";
+
+learningProduct =
+"Ý kiến ban đầu, câu trả lời hoặc dự đoán của học sinh.";
 
     learningObjective =
 "Nhận biết chủ đề, hình thành sự chú ý và sẵn sàng tham gia bài học.";
@@ -188,7 +201,14 @@ else if(role.includes("Khám phá")) {
 
   learningObjective =
 "Hiểu kiến thức mới, giải thích được nội dung trọng tâm của bài học.";
-  
+ teacherActivity =
+"Giáo viên hướng dẫn học sinh quan sát, đặt câu hỏi và khám phá kiến thức mới.";
+
+studentActivity =
+"Học sinh thảo luận, tìm hiểu thông tin và hình thành kiến thức.";
+
+learningProduct =
+"Câu trả lời, ghi chép kiến thức hoặc kết quả khám phá."; 
 }
 
 else if(role.includes("Minh họa")) {
@@ -201,7 +221,14 @@ else if(role.includes("Minh họa")) {
 
   learningObjective =
 "Phân tích, quan sát và hiểu rõ kiến thức thông qua ví dụ minh họa.";
-  
+teacherActivity =
+"Giáo viên trình bày ví dụ, minh họa kiến thức và hướng dẫn cách thực hiện.";
+
+studentActivity =
+"Học sinh quan sát, phân tích ví dụ và rút ra kiến thức.";
+
+learningProduct =
+"Phiếu học tập, câu trả lời hoặc phần trình bày của học sinh.";  
 }
 
 else if(role.includes("Thực hành")) {
@@ -214,7 +241,14 @@ else if(role.includes("Thực hành")) {
 
   learningObjective =
 "Vận dụng kiến thức vào thực hành, giải quyết nhiệm vụ và tạo sản phẩm học tập.";
-  
+teacherActivity =
+"Tổ chức hoạt động luyện tập, giao nhiệm vụ và hỗ trợ học sinh thực hành.";
+
+studentActivity =
+"Học sinh thực hiện nhiệm vụ, hợp tác nhóm và vận dụng kiến thức.";
+
+learningProduct =
+"Sản phẩm thực hành, bài trình bày hoặc kết quả hoạt động nhóm.";  
 }
 
 else if(role.includes("Tổng kết")) {
@@ -227,7 +261,14 @@ else if(role.includes("Tổng kết")) {
 
   learningObjective =
 "Củng cố kiến thức, đánh giá kết quả học tập và ghi nhớ nội dung chính.";
-  
+teacherActivity =
+"Giáo viên nhận xét, đánh giá kết quả và củng cố kiến thức trọng tâm.";
+
+studentActivity =
+"Học sinh chia sẻ kết quả, tự đánh giá và ghi nhớ kiến thức.";
+
+learningProduct =
+"Kết quả học tập, phần trình bày hoặc nội dung ghi nhớ cuối bài.";  
 }
 imagePrompt =
 "Educational image scene " + i + ". " +
@@ -264,6 +305,20 @@ ${scenePurpose}
 ${learningObjective}
 </p>
 
+<p>
+👩‍🏫 <b>Hoạt động giáo viên:</b><br>
+${teacherActivity}
+</p>
+
+<p>
+👨‍🎓 <b>Hoạt động học sinh:</b><br>
+${studentActivity}
+</p>
+
+<p>
+📌 <b>Sản phẩm học tập:</b><br>
+${learningProduct}
+</p>
 <p>
 🏫 <b>Bối cảnh:</b><br>
 Môi trường giáo dục Việt Nam, phù hợp với học sinh lớp ${grade}.

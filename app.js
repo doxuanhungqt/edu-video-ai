@@ -171,6 +171,11 @@ let teacherActivity = "";
 let studentActivity = "";
 
 let learningProduct = "";
+    let assessmentCriteria = "";
+
+let assessmentQuestion = "";
+
+let teacherFeedback = "";
     if(role.includes("Khởi động")) {
 
   sceneImageStyle =
@@ -187,6 +192,15 @@ studentActivity =
 
 learningProduct =
 "Ý kiến ban đầu, câu trả lời hoặc dự đoán của học sinh.";
+
+    assessmentCriteria =
+"Học sinh tham gia hoạt động, thể hiện sự chú ý và chia sẻ ý kiến ban đầu.";
+
+assessmentQuestion =
+"Em biết gì về chủ đề bài học hôm nay?";
+
+teacherFeedback =
+"Giáo viên khuyến khích, ghi nhận ý kiến và dẫn dắt vào bài học.";
 
     learningObjective =
 "Nhận biết chủ đề, hình thành sự chú ý và sẵn sàng tham gia bài học.";
@@ -209,6 +223,15 @@ studentActivity =
 
 learningProduct =
 "Câu trả lời, ghi chép kiến thức hoặc kết quả khám phá."; 
+
+  assessmentCriteria =
+"Học sinh hiểu nội dung mới, tham gia thảo luận và giải thích được kiến thức.";
+
+assessmentQuestion =
+"Em hãy trình bày kiến thức mới vừa khám phá.";
+
+teacherFeedback =
+"Giáo viên nhận xét, bổ sung và hướng dẫn học sinh hoàn thiện kiến thức.";
 }
 
 else if(role.includes("Minh họa")) {
@@ -229,6 +252,15 @@ studentActivity =
 
 learningProduct =
 "Phiếu học tập, câu trả lời hoặc phần trình bày của học sinh.";  
+
+  assessmentCriteria =
+"Học sinh nhận diện được nội dung minh họa, giải thích được ví dụ và liên hệ kiến thức.";
+
+assessmentQuestion =
+"Ví dụ minh họa giúp em hiểu thêm điều gì?";
+
+teacherFeedback =
+"Giáo viên nhận xét cách hiểu, giải thích thêm và điều chỉnh sai sót.";
 }
 
 else if(role.includes("Thực hành")) {
@@ -248,7 +280,16 @@ studentActivity =
 "Học sinh thực hiện nhiệm vụ, hợp tác nhóm và vận dụng kiến thức.";
 
 learningProduct =
-"Sản phẩm thực hành, bài trình bày hoặc kết quả hoạt động nhóm.";  
+"Sản phẩm thực hành, bài trình bày hoặc kết quả hoạt động nhóm."; 
+
+  assessmentCriteria =
+"Học sinh vận dụng được kiến thức, hoàn thành nhiệm vụ và tạo sản phẩm học tập.";
+
+assessmentQuestion =
+"Em hãy trình bày cách em đã thực hiện nhiệm vụ.";
+
+teacherFeedback =
+"Giáo viên nhận xét kết quả, hướng dẫn điều chỉnh và khuyến khích vận dụng.";
 }
 
 else if(role.includes("Tổng kết")) {
@@ -269,6 +310,15 @@ studentActivity =
 
 learningProduct =
 "Kết quả học tập, phần trình bày hoặc nội dung ghi nhớ cuối bài.";  
+
+  assessmentCriteria =
+"Học sinh tổng hợp được kiến thức, tự đánh giá kết quả và ghi nhớ nội dung trọng tâm.";
+
+assessmentQuestion =
+"Em hãy nêu lại những kiến thức quan trọng nhất của bài học.";
+
+teacherFeedback =
+"Giáo viên nhận xét, đánh giá và định hướng vận dụng kiến thức vào thực tế.";
 }
 imagePrompt =
 "Educational image scene " + i + ". " +

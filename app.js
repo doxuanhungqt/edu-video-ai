@@ -204,6 +204,8 @@ teacherFeedback =
 
     learningObjective =
 "Nhận biết chủ đề, hình thành sự chú ý và sẵn sàng tham gia bài học.";
+
+    }
     
 else if(role.includes("Khám phá")) {
 

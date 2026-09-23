@@ -162,12 +162,63 @@ const sceneRoles = [
 
     const start = (i - 1) * timePerScene;
     const end = i * timePerScene;
+    const role = sceneRoles[(i - 1) % sceneRoles.length];
+    let sceneImageStyle = "";
+    let scenePurpose = "";
+    if(role.includes("Khởi động")) {
+
+  sceneImageStyle =
+  "Opening scene, introducing lesson, students preparing, teacher welcoming students.";
+
+}
+scenePurpose =
+"Gây hứng thú, tạo kết nối và giới thiệu bài học.";
+else if(role.includes("Khám phá")) {
+
+  sceneImageStyle =
+  "Students discovering new knowledge, teacher explaining, learning materials.";
+
+ scenePurpose =
+"Hình thành kiến thức mới, giúp học sinh khám phá nội dung bài học.";
+  
+}
+
+else if(role.includes("Minh họa")) {
+
+  sceneImageStyle =
+  "Detailed demonstration, close-up learning activity, clear visual explanation.";
+
+  scenePurpose =
+"Làm rõ kiến thức bằng hình ảnh, ví dụ và hướng dẫn trực quan.";
+  
+}
+
+else if(role.includes("Thực hành")) {
+
+  sceneImageStyle =
+  "Students practicing, group activity, active learning environment.";
+
+  scenePurpose =
+"Tổ chức hoạt động luyện tập, trải nghiệm và vận dụng.";
+  
+}
+
+else if(role.includes("Tổng kết")) {
+
+  sceneImageStyle =
+  "Students sharing results, happy ending, lesson conclusion.";
+
+  scenePurpose =
+"Củng cố kiến thức, ghi nhớ nội dung trọng tâm.";
+  
+}
 imagePrompt =
 "Educational image scene " + i + ". " +
 "Topic: " + topic + ". " +
 "Grade: " + grade + ". " +
 "Audience: " + audience + ". " +
   "Subject style: " + subjectStyle + ". " +
+  "Scene style: " + sceneImageStyle + ". " +
 "Characters: Vietnamese students, appropriate age, suitable school uniforms, happy expressions, natural poses, teacher guiding students. " +
 "Location: Vietnamese school environment. " +
 "Style: " + style + ". " +
@@ -175,7 +226,8 @@ imagePrompt =
 "Lighting: natural daylight, warm and friendly atmosphere. " +
 "High quality educational illustration, clear details, suitable for Canva AI. " +
 "Negative prompt: blurry image, distorted faces, extra fingers, wrong anatomy, low quality.";
-const role = sceneRoles[(i - 1) % sceneRoles.length];
+
+
     storyboard += `
 <div class="scene">
 
@@ -183,6 +235,11 @@ const role = sceneRoles[(i - 1) % sceneRoles.length];
 <p>
 🎬 <b>Vai trò cảnh:</b><br>
 ${role}
+</p>
+
+<p>
+🎯 <b>Ý đồ cảnh:</b><br>
+${scenePurpose}
 </p>
 <p>
 🏫 <b>Bối cảnh:</b><br>

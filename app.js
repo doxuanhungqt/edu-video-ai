@@ -181,7 +181,6 @@ let teacherFeedback = "";
   sceneImageStyle =
   "Opening scene, introducing lesson, students preparing, teacher welcoming students.";
 
-}
 scenePurpose =
 "Gây hứng thú, tạo kết nối và giới thiệu bài học.";
     teacherActivity =

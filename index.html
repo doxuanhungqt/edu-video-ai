@@ -56,6 +56,57 @@
     footer { text-align: center; font-size: 12px; color: var(--muted); padding: 20px 0; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--bg); border-top: 1px solid var(--border); }
     .hidden { display: none !important; }
     @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .wide { grid-column: span 1; } }
+    .lesson-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+.lesson-table th {
+  background: #1769e0;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.lesson-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.lesson-table th:nth-child(1),
+.lesson-table td:nth-child(1) {
+  width: 15%;
+}
+
+.lesson-table th:nth-child(2),
+.lesson-table td:nth-child(2) {
+  width: 17%;
+}
+
+.lesson-table th:nth-child(3),
+.lesson-table td:nth-child(3) {
+  width: 18%;
+}
+
+.lesson-table th:nth-child(4),
+.lesson-table td:nth-child(4) {
+  width: 18%;
+}
+
+.lesson-table th:nth-child(5),
+.lesson-table td:nth-child(5) {
+  width: 15%;
+}
+
+.lesson-table th:nth-child(6),
+.lesson-table td:nth-child(6) {
+  width: 17%;
+}
   </style>
 </head>
 <body>

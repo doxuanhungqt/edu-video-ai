@@ -3,6 +3,36 @@ const getEl = function(id) { return document.getElementById(id); };
 if (C.SUPABASE_URL && C.SUPABASE_PUBLISHABLE_KEY) sb = window.supabase.createClient(C.SUPABASE_URL, C.SUPABASE_PUBLISHABLE_KEY);
 
 function msg(el, text, type) { if (el) { el.textContent = text; el.className = "msg " + (type || ""); } }
+function renderLessonPlanTable(plan) {
+
+  const box = document.getElementById("lessonPlanTable");
+
+  if (!box) return;
+
+  box.innerHTML = `
+
+  <table class="lesson-table">
+
+    <tr>
+      <th>Hoạt động</th>
+      <th>Mục tiêu</th>
+      <th>Giáo viên</th>
+      <th>Học sinh</th>
+      <th>Sản phẩm</th>
+      <th>Đánh giá</th>
+    </tr>
+
+    <tr>
+      <td colspan="6">
+        ${plan.replace(/\n/g,"<br>")}
+      </td>
+    </tr>
+
+  </table>
+
+  `;
+
+}
 
 function showApp(profile) {
   getEl("gate").classList.add("hidden"); getEl("app").classList.remove("hidden"); getEl("logoutBtn").classList.remove("hidden");
@@ -544,13 +574,12 @@ getEl("output").innerHTML += `
 
 <h2>📚 KẾ HOẠCH BÀI DẠY AI</h2>
 
-<pre>
-${lessonPlan}
-</pre>
+<div id="lessonPlanTable"></div>
 
 </div>
 
 ` + storyboard;
+  renderLessonPlanTable(lessonPlan);
 
   if (sb && currentUser) {
 

@@ -369,6 +369,22 @@ ${studentActivity}
 📌 <b>Sản phẩm học tập:</b><br>
 ${learningProduct}
 </p>
+
+<p>
+✅ <b>Tiêu chí đánh giá:</b><br>
+${assessmentCriteria}
+</p>
+
+<p>
+❓ <b>Câu hỏi đánh giá:</b><br>
+${assessmentQuestion}
+</p>
+
+<p>
+💬 <b>Phản hồi giáo viên:</b><br>
+${teacherFeedback}
+</p>
+
 <p>
 🏫 <b>Bối cảnh:</b><br>
 Môi trường giáo dục Việt Nam, phù hợp với học sinh lớp ${grade}.

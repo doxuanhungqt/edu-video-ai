@@ -165,6 +165,7 @@ const sceneRoles = [
     const role = sceneRoles[(i - 1) % sceneRoles.length];
     let sceneImageStyle = "";
     let scenePurpose = "";
+    let learningObjective = "";
     if(role.includes("Khởi động")) {
 
   sceneImageStyle =
@@ -173,6 +174,10 @@ const sceneRoles = [
 }
 scenePurpose =
 "Gây hứng thú, tạo kết nối và giới thiệu bài học.";
+
+    learningObjective =
+"Nhận biết chủ đề, hình thành sự chú ý và sẵn sàng tham gia bài học.";
+    
 else if(role.includes("Khám phá")) {
 
   sceneImageStyle =
@@ -180,6 +185,9 @@ else if(role.includes("Khám phá")) {
 
  scenePurpose =
 "Hình thành kiến thức mới, giúp học sinh khám phá nội dung bài học.";
+
+  learningObjective =
+"Hiểu kiến thức mới, giải thích được nội dung trọng tâm của bài học.";
   
 }
 
@@ -190,6 +198,9 @@ else if(role.includes("Minh họa")) {
 
   scenePurpose =
 "Làm rõ kiến thức bằng hình ảnh, ví dụ và hướng dẫn trực quan.";
+
+  learningObjective =
+"Phân tích, quan sát và hiểu rõ kiến thức thông qua ví dụ minh họa.";
   
 }
 
@@ -200,6 +211,9 @@ else if(role.includes("Thực hành")) {
 
   scenePurpose =
 "Tổ chức hoạt động luyện tập, trải nghiệm và vận dụng.";
+
+  learningObjective =
+"Vận dụng kiến thức vào thực hành, giải quyết nhiệm vụ và tạo sản phẩm học tập.";
   
 }
 
@@ -210,6 +224,9 @@ else if(role.includes("Tổng kết")) {
 
   scenePurpose =
 "Củng cố kiến thức, ghi nhớ nội dung trọng tâm.";
+
+  learningObjective =
+"Củng cố kiến thức, đánh giá kết quả học tập và ghi nhớ nội dung chính.";
   
 }
 imagePrompt =
@@ -241,6 +258,12 @@ ${role}
 🎯 <b>Ý đồ cảnh:</b><br>
 ${scenePurpose}
 </p>
+
+<p>
+📚 <b>Mục tiêu học tập:</b><br>
+${learningObjective}
+</p>
+
 <p>
 🏫 <b>Bối cảnh:</b><br>
 Môi trường giáo dục Việt Nam, phù hợp với học sinh lớp ${grade}.

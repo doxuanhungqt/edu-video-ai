@@ -625,6 +625,7 @@ tạo cảm giác tích cực và hứng thú cho học sinh.
 
 
   getEl("output").classList.remove("hidden");
+  
 getEl("output").innerHTML += `
 
 <div class="lesson-plan">
@@ -638,6 +639,9 @@ getEl("output").innerHTML += `
 ` + storyboard;
   renderLessonPlanTable(lessonPlan);
 
+  if(getEl("exportButtons")){
+  getEl("exportButtons").classList.remove("hidden");
+}
   if (sb && currentUser) {
 
     sb.from("videos").insert({

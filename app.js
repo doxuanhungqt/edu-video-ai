@@ -150,6 +150,7 @@ if(durationText.includes("phút")){
 
   let storyboard = "";
   let imagePrompt = "";
+  let lessonPlan = "";
 const sceneRoles = [
   "Khởi động – tạo hứng thú",
   "Khám phá kiến thức mới",
@@ -176,6 +177,7 @@ let learningProduct = "";
 let assessmentQuestion = "";
 
 let teacherFeedback = "";
+    
     if(role.includes("Khởi động")) {
 
   sceneImageStyle =
@@ -321,6 +323,32 @@ assessmentQuestion =
 teacherFeedback =
 "Giáo viên nhận xét, đánh giá và định hướng vận dụng kiến thức vào thực tế.";
 }
+    lessonPlan += `
+HOẠT ĐỘNG: ${role}
+
+Mục tiêu:
+${learningObjective}
+
+Hoạt động giáo viên:
+${teacherActivity}
+
+Hoạt động học sinh:
+${studentActivity}
+
+Sản phẩm học tập:
+${learningProduct}
+
+Tiêu chí đánh giá:
+${assessmentCriteria}
+
+Câu hỏi đánh giá:
+${assessmentQuestion}
+
+Phản hồi giáo viên:
+${teacherFeedback}
+
+--------------------
+`;
 imagePrompt =
 "Educational image scene " + i + ". " +
 "Topic: " + topic + ". " +
@@ -335,7 +363,6 @@ imagePrompt =
 "Lighting: natural daylight, warm and friendly atmosphere. " +
 "High quality educational illustration, clear details, suitable for Canva AI. " +
 "Negative prompt: blurry image, distorted faces, extra fingers, wrong anatomy, low quality.";
-
 
     storyboard += `
 <div class="scene">
@@ -497,7 +524,7 @@ tạo cảm giác tích cực và hứng thú cho học sinh.
 
   }
 
-
+console.log("LESSON PLAN:", lessonPlan);
   getEl("output").innerHTML =
   `
 <h2>🎬 STORYBOARD AI</h2>
@@ -512,7 +539,19 @@ tạo cảm giác tích cực và hứng thú cho học sinh.
 
 
   getEl("output").classList.remove("hidden");
-getEl("output").innerHTML += storyboard;
+getEl("output").innerHTML += `
+
+<div class="lesson-plan">
+
+<h2>📚 KẾ HOẠCH BÀI DẠY AI</h2>
+
+<pre>
+${lessonPlan}
+</pre>
+
+</div>
+
+` + storyboard;
 
   if (sb && currentUser) {
 

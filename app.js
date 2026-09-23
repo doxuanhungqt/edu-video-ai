@@ -524,7 +524,6 @@ tạo cảm giác tích cực và hứng thú cho học sinh.
 
   }
 
-console.log("LESSON PLAN:", lessonPlan);
   getEl("output").innerHTML =
   `
 <h2>🎬 STORYBOARD AI</h2>

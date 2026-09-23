@@ -707,6 +707,36 @@ if(getEl("copyPromptBtn")){
     alert("✅ Đã sao chép toàn bộ Prompt Storyboard!");
 
   };
+ 
+// Xuất giáo án Word AI
+
+if(getEl("exportWordBtn")){
+
+  getEl("exportWordBtn").onclick = function(){
+
+    const content = getEl("output").innerText;
+
+    const blob = new Blob(
+      [content],
+      {type:"application/msword"}
+    );
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "Giao_an_AI.doc";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+    alert("✅ Đã xuất giáo án Word AI!");
+
+  };
+
+} 
 }
 // Mở Canva với Prompt hình ảnh
 if(getEl("canvaBtn")){

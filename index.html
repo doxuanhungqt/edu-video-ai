@@ -57,12 +57,11 @@
     .hidden { display: none !important; }
     @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .wide { grid-column: span 1; } }
     .lesson-table {
-  width: 100%;
+  width: 1200px;
+  min-width: 1200px;
   border-collapse: collapse;
   margin-top: 20px;
-  table-layout: fixed;
 }
-
 .lesson-table th {
   background: #1769e0;
   color: white;
@@ -80,12 +79,12 @@
 
 .lesson-table th:nth-child(1),
 .lesson-table td:nth-child(1) {
-  width: 15%;
+  width: 14%;
 }
 
 .lesson-table th:nth-child(2),
 .lesson-table td:nth-child(2) {
-  width: 17%;
+  width: 18%;
 }
 
 .lesson-table th:nth-child(3),
@@ -100,12 +99,15 @@
 
 .lesson-table th:nth-child(5),
 .lesson-table td:nth-child(5) {
-  width: 15%;
+  width: 14%;
 }
 
 .lesson-table th:nth-child(6),
 .lesson-table td:nth-child(6) {
-  width: 17%;
+  width: 18%;
+}
+    .lesson-plan {
+  overflow-x: auto;
 }
   </style>
 </head>

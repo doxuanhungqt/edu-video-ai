@@ -638,10 +638,18 @@ getEl("output").innerHTML += `
 
 ` + storyboard;
   renderLessonPlanTable(lessonPlan);
+getEl("output").innerHTML += `
 
-  if(getEl("exportButtons")){
-  getEl("exportButtons").classList.remove("hidden");
-}
+<div class="export-area">
+
+<button id="exportWordBtn" class="secondary">
+📄 Xuất giáo án Word AI
+</button>
+
+</div>
+
+`;
+ 
   if (sb && currentUser) {
 
     sb.from("videos").insert({

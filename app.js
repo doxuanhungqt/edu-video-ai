@@ -9,29 +9,86 @@ function renderLessonPlanTable(plan) {
 
   if (!box) return;
 
+  const activities = plan.split("--------------------");
+
+  let rows = "";
+
+  activities.forEach(item => {
+
+    if (item.trim()) {
+
+      const get = (title) => {
+        const start = item.indexOf(title);
+        if (start === -1) return "";
+
+        const content = item.substring(start + title.length);
+
+        const next = content.search(
+          /Mục tiêu:|Hoạt động giáo viên:|Hoạt động học sinh:|Sản phẩm học tập:|Tiêu chí đánh giá:|Câu hỏi đánh giá:|Phản hồi giáo viên:/
+        );
+
+        return (next === -1 ? content : content.substring(0,next)).trim();
+      };
+
+
+      rows += `
+      <tr>
+
+        <td>
+          ${get("HOẠT ĐỘNG:")}
+        </td>
+
+        <td>
+          ${get("Mục tiêu:")}
+        </td>
+
+        <td>
+          ${get("Hoạt động giáo viên:")}
+        </td>
+
+        <td>
+          ${get("Hoạt động học sinh:")}
+        </td>
+
+        <td>
+          ${get("Sản phẩm học tập:")}
+        </td>
+
+        <td>
+          ${get("Tiêu chí đánh giá:")}
+          <br><br>
+          <b>Câu hỏi:</b>
+          ${get("Câu hỏi đánh giá:")}
+          <br><br>
+          <b>Phản hồi:</b>
+          ${get("Phản hồi giáo viên:")}
+        </td>
+
+      </tr>
+      `;
+    }
+
+  });
+
+
   box.innerHTML = `
 
   <table class="lesson-table">
 
-    <tr>
-      <th>Hoạt động</th>
-      <th>Mục tiêu</th>
-      <th>Giáo viên</th>
-      <th>Học sinh</th>
-      <th>Sản phẩm</th>
-      <th>Đánh giá</th>
-    </tr>
+  <tr>
+    <th>Hoạt động</th>
+    <th>Mục tiêu</th>
+    <th>Giáo viên</th>
+    <th>Học sinh</th>
+    <th>Sản phẩm</th>
+    <th>Đánh giá</th>
+  </tr>
 
-    <tr>
-      <td colspan="6">
-        ${plan.replace(/\n/g,"<br>")}
-      </td>
-    </tr>
+  ${rows}
 
   </table>
 
   `;
-
 }
 
 function showApp(profile) {

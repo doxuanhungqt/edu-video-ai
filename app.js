@@ -623,7 +623,6 @@ tạo cảm giác tích cực và hứng thú cho học sinh.
 </p>
 `;
 
-
   getEl("output").classList.remove("hidden");
   
 getEl("output").insertAdjacentHTML("beforeend",`
@@ -636,10 +635,6 @@ getEl("output").insertAdjacentHTML("beforeend",`
 
 </div>
 
-` + storyboard;
-  renderLessonPlanTable(lessonPlan);
-getEl("output").insertAdjacentHTML("beforeend",`
-
 <div class="export-area">
 
 <button id="exportWordBtn" class="secondary">
@@ -649,6 +644,8 @@ getEl("output").insertAdjacentHTML("beforeend",`
 </div>
 
 `);
+
+renderLessonPlanTable(lessonPlan);
  
   if (sb && currentUser) {
 

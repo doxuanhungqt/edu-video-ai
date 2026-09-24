@@ -661,34 +661,8 @@ tableBox.insertAdjacentHTML("afterend",`
 </div>
 
 `);
-  if(getEl("exportWordBtn")){
-
-  getEl("exportWordBtn").onclick = function(){
-
-    const content = getEl("output").innerText;
-
-    const blob = new Blob(
-      [content],
-      {type:"application/msword"}
-    );
-
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-
-    a.href = url;
-    a.download = "Giao_an_AI.doc";
-
-    a.click();
-
-    URL.revokeObjectURL(url);
-
-    alert("✅ Đã xuất giáo án Word AI!");
-
-  };
 
 }
- 
   if (sb && currentUser) {
 
     sb.from("videos").insert({
@@ -708,6 +682,7 @@ tableBox.insertAdjacentHTML("afterend",`
 
   }
 
+}
 
 async function loadVideos() {
   const box = getEl("videoList"); if (!box) return; box.innerHTML = "<p class='muted'>Đang tải kho video...</p>";
@@ -758,6 +733,35 @@ if(getEl("copyPromptBtn")){
 
   };
  
+// Xuất giáo án Word AI
+
+if(getEl("exportWordBtn")){
+
+  getEl("exportWordBtn").onclick = function(){
+
+    const content = getEl("output").innerText;
+
+    const blob = new Blob(
+      [content],
+      {type:"application/msword"}
+    );
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "Giao_an_AI.doc";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+    alert("✅ Đã xuất giáo án Word AI!");
+
+  };
+
+} 
 }
 // Mở Canva với Prompt hình ảnh
 if(getEl("canvaBtn")){
@@ -830,4 +834,3 @@ if(getEl("wordBtn")){
 
   };
 }
-

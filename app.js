@@ -831,3 +831,4 @@ if(getEl("wordBtn")){
 
   };
 }
+}

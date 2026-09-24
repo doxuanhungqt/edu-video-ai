@@ -6,7 +6,7 @@ function msg(el, text, type) { if (el) { el.textContent = text; el.className = "
 function renderLessonPlanTable(plan) {
 
   const box = document.getElementById("lessonPlanTable");
-.
+
   if (!box) return;
 
   const activities = plan.split("--------------------");

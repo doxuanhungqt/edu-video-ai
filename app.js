@@ -626,7 +626,7 @@ tạo cảm giác tích cực và hứng thú cho học sinh.
 
   getEl("output").classList.remove("hidden");
   
-getEl("output").innerHTML += `
+getEl("output").insertAdjacentHTML("beforeend",`
 
 <div class="lesson-plan">
 

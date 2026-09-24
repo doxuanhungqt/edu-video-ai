@@ -638,23 +638,17 @@ getEl("output").innerHTML += `
 
 ` + storyboard;
   renderLessonPlanTable(lessonPlan);
-const tableBox = getEl("lessonPlanTable");
+getEl("output").insertAdjacentHTML("beforeend",`
 
-if(tableBox){
+<div class="export-area">
 
-  tableBox.insertAdjacentHTML("afterend",`
+<button id="exportWordBtn" class="secondary">
+📄 Xuất giáo án Word AI
+</button>
 
-  <div class="export-area">
+</div>
 
-    <button id="exportWordBtn" class="secondary">
-    📄 Xuất giáo án Word AI
-    </button>
-
-  </div>
-
-  `);
-
-}
+`);
  
   if (sb && currentUser) {
 

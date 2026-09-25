@@ -635,34 +635,10 @@ getEl("output").insertAdjacentHTML("beforeend",`
 
 </div>
 
-<div class="export-area">
-
-<button id="exportWordBtn" class="secondary">
-📄 Xuất giáo án Word AI
-</button>
-
-</div>
-
 `);
 
 renderLessonPlanTable(lessonPlan);
- const tableBox = getEl("lessonPlanTable");
-
-if(tableBox){
-
-tableBox.insertAdjacentHTML("afterend",`
-
-<div class="export-area">
-
-<button id="exportWordBtn" class="secondary">
-📄 Xuất giáo án Word AI
-</button>
-
-</div>
-
-`);
-
-}
+ 
   if (sb && currentUser) {
 
     sb.from("videos").insert({

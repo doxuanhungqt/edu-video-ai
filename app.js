@@ -634,7 +634,13 @@ getEl("output").insertAdjacentHTML("beforeend",`
 <div id="lessonPlanTable"></div>
 
 </div>
+<div class="export-area">
 
+<button id="exportWordBtn" class="secondary">
+📄 Xuất giáo án Word AI
+</button>
+
+</div>
 `);
 
 renderLessonPlanTable(lessonPlan);

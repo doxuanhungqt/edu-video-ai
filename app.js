@@ -830,12 +830,19 @@ if(getEl("exportWordBtn")){
 
         const url = URL.createObjectURL(blob);
 
-        const a = document.createElement("a");
+       const a = document.createElement("a");
 
-        a.href = url;
-        a.download = "Giao_an_AI.doc";
+a.style.display = "none";
+a.href = url;
+a.download = "Giao_an_AI.doc";
 
-        a.click();
+document.body.appendChild(a);
+
+a.click();
+
+document.body.removeChild(a);
+
+URL.revokeObjectURL(url);
 
         URL.revokeObjectURL(url);
 

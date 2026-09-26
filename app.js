@@ -323,8 +323,8 @@ Yêu cầu:
 
 if(topic.includes("Phân số")){
 
-topicKnowledge =
-"Kiến thức trọng tâm: Khái niệm phân số, tử số, mẫu số, phân số bằng nhau, so sánh phân số, quy đồng mẫu số và vận dụng giải bài toán.";
+topicPrompt =
+"Kiến thức nền: Khái niệm phân số, tử số, mẫu số, phân số bằng nhau, so sánh phân số, quy đồng mẫu số và vận dụng giải bài toán.";
 
 }
 

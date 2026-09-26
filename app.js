@@ -714,7 +714,7 @@ if(getEl("copyPromptBtn")){
     alert("✅ Đã sao chép toàn bộ Prompt Storyboard!");
 
   };
- 
+  }
 // Xuất giáo án Word AI
   
 document.addEventListener("click", function(e){

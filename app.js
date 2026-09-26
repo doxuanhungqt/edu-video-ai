@@ -215,6 +215,7 @@ else if (audience.includes("Giáo viên")) {
   let currentSubjectInstruction = "";
   let subjectRule = "";
   let topicPrompt = "";
+  let videoPurpose = "";
 
   if(subject.includes("Giáo dục thể chất")){
 
@@ -242,7 +243,20 @@ else if(subject.includes("Toán")){
     `;
 
 }
+if(subject.includes("Giáo dục thể chất")){
 
+    videoPurpose =
+    "Video hướng dẫn kỹ thuật vận động, minh họa các giai đoạn thực hiện động tác, cách luyện tập và sửa lỗi.";
+
+}
+
+else if(subject.includes("Toán")){
+
+    videoPurpose =
+    "Video trực quan hóa khái niệm toán học, quy trình giải quyết vấn đề và cách vận dụng kiến thức.";
+
+}
+  
   function generateTopicKnowledge(){
 
 return `
@@ -259,6 +273,9 @@ ${currentSubjectInstruction}
 Định hướng suy luận môn học:
 
 ${subjectRule}
+Mục đích video:
+
+${videoPurpose}
 
 Hãy phân tích nội dung bài học để xây dựng video giáo dục.
 
@@ -584,6 +601,8 @@ const sceneRoles = [
     const start = (i - 1) * timePerScene;
     const end = i * timePerScene;
     const role = sceneRoles[(i - 1) % sceneRoles.length];
+    const lessonContent = topicKnowledge;
+const videoGoal = videoPurpose;
     let sceneImageStyle = "";
     let scenePurpose = "";
     let learningObjective = "";
@@ -660,12 +679,18 @@ else if(role.includes("Minh họa")) {
 "Làm rõ kiến thức bằng hình ảnh, ví dụ và hướng dẫn trực quan.";
 
   learningObjective =
-`Học sinh lớp ${grade} phân tích, quan sát và hiểu rõ cách thực hiện ${topic} thông qua ví dụ minh họa trong môn ${subject}.`;
+learningObjective =
+`Học sinh lớp ${grade} quan sát và hiểu nội dung cốt lõi của ${topic} thông qua hình ảnh minh họa:
+${lessonContent}`;
 teacherActivity =
-`Giáo viên minh họa nội dung ${topic}, hướng dẫn kỹ thuật, thao tác hoặc cách giải quyết nhiệm vụ phù hợp với môn ${subject}.`;
+`Giáo viên sử dụng video minh họa nội dung:
+${lessonContent}
+để hướng dẫn kỹ thuật, thao tác hoặc cách thực hiện trong môn ${subject}.`;
 
 studentActivity =
-`Học sinh lớp ${grade} quan sát, phân tích ví dụ về ${topic}, trao đổi và rút ra kiến thức, kỹ năng cần thiết.`;
+`Học sinh lớp ${grade} quan sát video, phân tích nội dung:
+${lessonContent}
+và rút ra kiến thức, kỹ năng cần thiết.`;
 
 learningProduct =
 `Phiếu học tập, phần trình bày hoặc sản phẩm thể hiện sự hiểu biết về ${topic}.`;

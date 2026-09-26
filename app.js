@@ -844,8 +844,6 @@ document.body.removeChild(a);
 
 URL.revokeObjectURL(url);
 
-        URL.revokeObjectURL(url);
-
-        alert("✅ Đã xuất giáo án Word AI!");
+alert("✅ Đã xuất giáo án Word AI!");
     };
 }

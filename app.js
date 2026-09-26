@@ -298,7 +298,8 @@ ${videoPurpose}
 
 Hãy phân tích nội dung bài học để xây dựng video giáo dục.
 Hãy trình bày kết quả dưới dạng các ý tưởng cảnh video.
-
+Không trình bày dưới dạng kiến thức trọng tâm hoặc tóm tắt lý thuyết.
+Hãy ưu tiên mô tả các cảnh quay video có thể tạo hình ảnh và chuyển động.
 Mỗi ý tưởng cần gồm:
 - Nội dung cảnh.
 - Hình ảnh/hoạt động cần minh họa.

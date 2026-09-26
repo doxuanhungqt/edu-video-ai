@@ -243,6 +243,18 @@ else if(subject.includes("Toán")){
     `;
 
 }
+  else if(subject.includes("Hoạt động trải nghiệm")){
+
+    subjectRule =
+    `
+    Phân tích theo đặc trưng Hoạt động trải nghiệm, hướng nghiệp:
+    - Xác định tình huống thực tế cần giải quyết.
+    - Xác định kỹ năng sống, kỹ năng giao tiếp và hợp tác cần hình thành.
+    - Xác định hoạt động trải nghiệm, nhiệm vụ thực hành.
+    - Đề xuất bối cảnh, nhân vật và tình huống phù hợp để xây dựng video.
+    `;
+
+}
 if(subject.includes("Giáo dục thể chất")){
 
     videoPurpose =
@@ -254,6 +266,13 @@ else if(subject.includes("Toán")){
 
     videoPurpose =
     "Video trực quan hóa khái niệm toán học, quy trình giải quyết vấn đề và cách vận dụng kiến thức.";
+
+}
+  
+  else if(subject.includes("Hoạt động trải nghiệm")){
+
+    videoPurpose =
+    "Video giúp học sinh nhận biết tình huống thực tế, hình thành kỹ năng sống, biết cách xử lý vấn đề và vận dụng vào cuộc sống.";
 
 }
   

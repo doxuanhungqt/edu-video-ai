@@ -216,6 +216,7 @@ else if (audience.includes("Giáo viên")) {
   let subjectRule = "";
   let topicPrompt = "";
   let videoPurpose = "";
+  let videoScript = "";
 
   if(subject.includes("Giáo dục thể chất")){
 
@@ -602,6 +603,34 @@ if(durationText.includes("phút")){
 topicKnowledge = generateTopicKnowledge();
 console.log(topicKnowledge);
 }
+  }
+
+videoScript = `
+Xây dựng kịch bản video AI:
+
+Môn học: ${subject}
+Lớp: ${grade}
+Chủ đề: ${topic}
+
+Nội dung bài học:
+${topicKnowledge}
+
+Mục đích video:
+${videoPurpose}
+
+Yêu cầu:
+- Chia video thành các cảnh rõ ràng.
+- Mỗi cảnh gồm:
+  + Bối cảnh.
+  + Nhân vật.
+  + Hành động.
+  + Nội dung kiến thức cần truyền tải.
+  + Góc quay.
+  + Lời thoại hoặc lời dẫn.
+- Nội dung phù hợp với học sinh lớp ${grade}.
+- Ưu tiên hình ảnh trực quan, sinh động.
+`;
+console.log(videoScript);
   lessonPlan = `
 MÔN HỌC:
 ${subject}

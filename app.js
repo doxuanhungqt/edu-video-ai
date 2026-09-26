@@ -213,6 +213,30 @@ else if (audience.includes("Giáo viên")) {
  const durationText = getEl("duration").value;
   let topicKnowledge = "";
   let currentSubjectInstruction = "";
+  let topicPrompt = "";
+
+  function generateTopicKnowledge(){
+
+return `
+Dựa vào:
+
+Môn học: ${subject}
+Lớp: ${grade}
+Chủ đề: ${topic}
+
+Hãy xác định kiến thức trọng tâm của bài học.
+
+Yêu cầu:
+- Đúng đặc trưng môn học.
+- Phù hợp với học sinh lớp ${grade}.
+- Không viết chung chung.
+- Nêu rõ kiến thức và kỹ năng cốt lõi.
+`;
+
+}
+  topicPrompt = `
+...
+`;
   if(subject.includes("Toán")){
 
 if(topic.includes("Phân số")){
@@ -488,6 +512,11 @@ if(durationText.includes("phút")){
   let storyboard = "";
   let imagePrompt = "";
   let lessonPlan = "";
+  if(topicKnowledge === ""){
+
+topicKnowledge = generateTopicKnowledge();
+console.log(topicKnowledge);
+}
   lessonPlan = `
 MÔN HỌC:
 ${subject}

@@ -1087,7 +1087,7 @@ renderLessonPlanTable(lessonPlan);
       topic,
       level: "Giáo dục",
       description: purpose,
-      prompt: storyboard,
+     prompt: videoScript,
       duration,
       scene_count: scenes,
       status: "DRAFT"

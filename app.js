@@ -304,6 +304,8 @@ Yêu cầu:
 - Xác định các bước/diễn biến chính của nội dung bài học.
 - Đề xuất các hình ảnh, hoạt động hoặc tình huống cần xuất hiện trong video.
 - Nội dung phù hợp với học sinh lớp ${grade}.
+- Chuyển nội dung bài học thành các ý tưởng hình ảnh, hoạt cảnh và cảnh quay phục vụ video AI.
+- Ưu tiên mô tả những nội dung có thể trực quan hóa bằng hình ảnh, nhân vật, hành động và bối cảnh thực tế.
 - Không viết chung chung.
 `;
 

@@ -297,6 +297,12 @@ Mục đích video:
 ${videoPurpose}
 
 Hãy phân tích nội dung bài học để xây dựng video giáo dục.
+Hãy trình bày kết quả dưới dạng các ý tưởng cảnh video.
+
+Mỗi ý tưởng cần gồm:
+- Nội dung cảnh.
+- Hình ảnh/hoạt động cần minh họa.
+- Kiến thức được truyền tải.
 
 Yêu cầu:
 - Xác định kiến thức cốt lõi cần truyền tải trong video.

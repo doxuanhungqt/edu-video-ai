@@ -796,6 +796,8 @@ imagePrompt =
 "Audience: " + audience + ". " +
   "Subject style: " + subjectStyle + ". " +
   "Subject instruction: " + subjectInstruction + ". " +
+  "Lesson content: " + lessonContent + "." +
+"Video purpose: " + videoGoal + "." +
   "Scene style: " + sceneImageStyle + ". " +
 "Characters: Vietnamese students, appropriate age, suitable school uniforms, happy expressions, natural poses, teacher guiding students. " +
 "Location: Vietnamese school environment. " +

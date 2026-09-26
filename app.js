@@ -713,12 +713,18 @@ else if(role.includes("Thực hành")) {
 "Tổ chức hoạt động luyện tập, trải nghiệm và vận dụng.";
 
   learningObjective =
-`Học sinh lớp ${grade} vận dụng kiến thức về ${topic} trong môn ${subject}, thực hiện đúng yêu cầu kỹ thuật, rèn luyện kỹ năng và hoàn thành nhiệm vụ học tập.`;
+`Học sinh lớp ${grade} thực hành nội dung:
+${lessonContent}
+vận dụng đúng kỹ thuật, rèn luyện kỹ năng và hoàn thành nhiệm vụ học tập.`;
 teacherActivity =
-`Giáo viên tổ chức hoạt động thực hành về ${topic}, hướng dẫn kỹ thuật, quan sát quá trình luyện tập và hỗ trợ học sinh điều chỉnh sai sót.`;
+`Giáo viên tổ chức cho học sinh thực hành nội dung:
+${lessonContent}
+hướng dẫn kỹ thuật, quan sát quá trình luyện tập và hỗ trợ sửa lỗi.`;
 
 studentActivity =
-`Học sinh lớp ${grade} thực hành ${topic}, phối hợp với bạn học, vận dụng kiến thức và hoàn thiện kỹ năng của môn ${subject}.`;
+`Học sinh lớp ${grade} thực hành nội dung:
+${lessonContent}
+phối hợp với bạn học, vận dụng kiến thức và hoàn thiện kỹ năng.`;
 learningProduct =
 `Kết quả thực hành, phần trình bày hoặc sản phẩm thể hiện kỹ năng về ${topic}.`;
 

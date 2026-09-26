@@ -720,65 +720,72 @@ if(getEl("copyPromptBtn")){
 document.addEventListener("click", function(e){
 
    if(e.target.closest("#exportWordBtn")){
-        console.log("EXPORT WORD CLICK");
+ console.log("EXPORT WORD CLICK");
 
-       const content = getEl("output").innerText;
+const tableHTML = document.querySelector("#lessonPlanTable table");
 
-const lines = content.split("\n").filter(x => x.trim() !== "");
+const rows = [];
 
-let title = [];
-let tableRows = [];
+if(tableHTML){
 
-let startTable = lines.findIndex(x => x.includes("Hoạt động"));
+    tableHTML.querySelectorAll("tr").forEach(tr => {
 
-if (startTable !== -1) {
-    title = lines.slice(0, startTable);
+        const cells = [];
 
-    const body = lines.slice(startTable + 6);
+        tr.querySelectorAll("th, td").forEach(td => {
+            cells.push(td.innerText.trim());
+        });
 
-    tableRows.push([
-        "Hoạt động",
-        "Mục tiêu",
-        "Giáo viên",
-        "Học sinh",
-        "Sản phẩm",
-        "Đánh giá"
-    ]);
+        rows.push(cells);
 
-    for (let i = 0; i < body.length; i += 6) {
-        tableRows.push([
-            body[i] || "",
-            body[i + 1] || "",
-            body[i + 2] || "",
-            body[i + 3] || "",
-            body[i + 4] || "",
-            body[i + 5] || ""
-        ]);
-    }
+    });
+
 }
 
 
 const table = new docx.Table({
-    rows: tableRows.map(row =>
+
+    rows: rows.map(row =>
+
         new docx.TableRow({
+
             children: row.map(cell =>
+
                 new docx.TableCell({
+
                     children: [
+
                         new docx.Paragraph({
+
                             children: [
+
                                 new docx.TextRun({
+
                                     text: cell,
+
                                     font: "Times New Roman",
+
                                     size: 22
+
                                 })
+
                             ]
+
                         })
+
                     ]
+
                 })
+
             )
+
         })
+
     )
+
 });
+
+
 
 
 const doc = new docx.Document({

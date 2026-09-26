@@ -215,23 +215,155 @@ Chủ đề: ${topic}
 Nội dung kế hoạch bài dạy phải thể hiện đúng đặc trưng môn học:
 
 - Giáo dục thể chất:
-Tập trung vào kỹ thuật vận động, tư thế, thao tác, luyện tập, sửa lỗi và đánh giá kỹ năng.
+Nội dung phải thể hiện rõ kỹ năng vận động của bài học.
+Cần có:
++ Kỹ thuật hoặc động tác trọng tâm.
++ Tư thế chuẩn bị và cách thực hiện.
++ Các bước luyện tập.
++ Lỗi thường gặp và cách sửa.
++ Tiêu chí đánh giá kỹ năng vận động.
 
+Ví dụ:
+Chạy: xuất phát, chạy lao, phối hợp tay chân, duy trì tốc độ, về đích.
+Bóng đá: dẫn bóng, chuyền bóng, sút bóng.
+Cầu lông: phát cầu, đánh cầu, di chuyển.
 - Toán học:
-Tập trung vào khái niệm, công thức, quy trình giải và bài tập vận dụng.
+Nội dung phải thể hiện:
++ Khái niệm, tính chất hoặc quy tắc toán học.
++ Quy trình tư duy giải quyết vấn đề.
++ Ví dụ minh họa.
++ Bài tập vận dụng.
++ Cách học sinh trình bày và giải thích cách làm.
 
 - Tiếng Anh:
-Tập trung vào từ vựng, cấu trúc câu, phát âm, nghe, nói, đọc, viết.
-
+Nội dung phải thể hiện:
++ Từ vựng trọng tâm của chủ đề.
++ Mẫu câu/cấu trúc ngữ pháp.
++ Luyện nghe, nói, đọc, viết.
++ Hoạt động giao tiếp thực tế.
++ Sản phẩm ngôn ngữ của học sinh.
 - Tiếng Việt/Ngữ văn:
-Tập trung vào đọc hiểu, phân tích, viết và cảm thụ.
+Nội dung phải thể hiện:
++ Đọc hiểu văn bản, xác định nội dung và nghệ thuật.
++ Phân tích nhân vật, hình ảnh, chi tiết tiêu biểu.
++ Rèn kỹ năng viết và tạo lập văn bản.
++ Phát triển năng lực giao tiếp, cảm thụ và trình bày ý kiến.
++ Sản phẩm có thể là bài viết, đoạn văn, câu trả lời hoặc phần trình bày của học sinh.
 
 - Khoa học/KHTN:
-Tập trung vào quan sát, thí nghiệm, giải thích hiện tượng và vận dụng.
+Nội dung phải thể hiện:
++ Quan sát sự vật, hiện tượng và đặt câu hỏi khoa học.
++ Thực hiện thí nghiệm hoặc hoạt động khám phá.
++ Phân tích kết quả, giải thích nguyên nhân và rút ra kết luận.
++ Vận dụng kiến thức vào thực tiễn.
++ Sản phẩm có thể là báo cáo thí nghiệm, phiếu học tập hoặc kết quả khám phá.
+
+- Vật lí:
+Nội dung phải thể hiện:
++ Khái niệm, định luật, công thức vật lí.
++ Giải thích hiện tượng bằng cơ sở khoa học.
++ Phân tích mối quan hệ giữa các đại lượng.
++ Hướng dẫn giải bài tập và vận dụng công thức.
++ Có thể sử dụng thí nghiệm, mô hình hoặc thiết bị đo.
++ Sản phẩm có thể là bài giải, báo cáo thí nghiệm, sơ đồ hoặc mô hình.
+
+- Hóa học:
+Nội dung phải thể hiện:
++ Khái niệm, tính chất của chất và phản ứng hóa học.
++ Viết phương trình hóa học và giải thích quá trình biến đổi.
++ Thực hành thí nghiệm, quan sát hiện tượng và rút ra kết luận.
++ Kỹ năng tính toán hóa học và vận dụng thực tế.
++ Đảm bảo an toàn khi sử dụng hóa chất.
++ Sản phẩm có thể là phương trình, bài tập, báo cáo thí nghiệm hoặc sơ đồ phản ứng.
+
+- Sinh học:
+Nội dung phải thể hiện:
++ Cấu tạo, chức năng và quá trình sống của sinh vật.
++ Quan sát, phân tích hình ảnh, sơ đồ hoặc mẫu vật.
++ Giải thích các hiện tượng sinh học.
++ Liên hệ sức khỏe, môi trường và đời sống.
++ Sản phẩm có thể là sơ đồ tư duy, báo cáo quan sát, bài trình bày hoặc mô hình.
 
 - Lịch sử/Địa lí:
-Tập trung vào sự kiện, nhân vật, bản đồ, phân tích và liên hệ thực tế.
+Nội dung phải thể hiện:
++ Xác định sự kiện, nhân vật, thời gian và không gian lịch sử.
++ Khai thác bản đồ, lược đồ, tư liệu và nguồn thông tin.
++ Phân tích nguyên nhân, diễn biến, ý nghĩa của sự kiện.
++ Nhận xét, so sánh và liên hệ thực tế.
++ Sản phẩm có thể là sơ đồ tư duy, bảng tổng hợp, bài trình bày hoặc phiếu học tập.
 
+- Lịch sử:
+Nội dung phải thể hiện:
++ Sự kiện, nhân vật, thời gian và bối cảnh lịch sử.
++ Phân tích nguyên nhân, diễn biến, kết quả và ý nghĩa.
++ Khai thác tư liệu lịch sử.
++ Rèn kỹ năng nhận xét, đánh giá và liên hệ.
++ Sản phẩm có thể là sơ đồ thời gian, bảng tổng hợp, bài trình bày.
+
+- Địa lí:
+Nội dung phải thể hiện:
++ Khai thác bản đồ, biểu đồ, số liệu địa lí.
++ Phân tích đặc điểm tự nhiên, kinh tế, xã hội.
++ Giải thích mối quan hệ giữa con người và môi trường.
++ Rèn kỹ năng nhận xét, so sánh và phân tích dữ liệu.
++ Sản phẩm có thể là biểu đồ, bản đồ tư duy, báo cáo hoặc bài trình bày.
+
+- Công nghệ:
+Nội dung phải thể hiện:
++ Kiến thức về quy trình công nghệ, kỹ thuật hoặc sản phẩm công nghệ.
++ Các bước thực hiện, thao tác và kỹ năng thực hành.
++ Sử dụng dụng cụ, vật liệu hoặc thiết bị phù hợp.
++ Đảm bảo an toàn trong quá trình thực hiện.
++ Sản phẩm có thể là mô hình, bản thiết kế, sản phẩm thực hành hoặc báo cáo.
+
+- Giáo dục công dân (THCS):
+Nội dung phải thể hiện:
++ Chuẩn mực đạo đức, quyền và nghĩa vụ của công dân.
++ Tình huống thực tế, cách xử lý và vận dụng trong cuộc sống.
++ Phân tích hành vi đúng, sai và đưa ra quan điểm.
++ Rèn luyện phẩm chất, thái độ và trách nhiệm.
++ Sản phẩm có thể là ý kiến thảo luận, bài trình bày hoặc xử lý tình huống.
+
+- Giáo dục kinh tế và pháp luật (THPT):
+Nội dung phải thể hiện:
++ Kiến thức về kinh tế, pháp luật và đời sống xã hội.
++ Phân tích các khái niệm, nguyên tắc kinh tế và quy định pháp luật.
++ Xử lý tình huống thực tiễn liên quan đến quyền, nghĩa vụ và trách nhiệm công dân.
++ Rèn năng lực tư duy kinh tế, hiểu biết pháp luật và ra quyết định có trách nhiệm.
++ Liên hệ các vấn đề thực tế trong gia đình, nhà trường và xã hội.
++ Sản phẩm có thể là bài trình bày, sơ đồ tư duy, phân tích tình huống hoặc bài viết lập luận.
+
+- Hoạt động trải nghiệm, hướng nghiệp:
+Nội dung phải thể hiện:
++ Hoạt động trải nghiệm thực tế, khám phá bản thân và môi trường xung quanh.
++ Kỹ năng giao tiếp, hợp tác, giải quyết vấn đề.
++ Hoạt động cá nhân, nhóm và nhiệm vụ trải nghiệm.
++ Liên hệ thực tế và định hướng phát triển bản thân.
++ Sản phẩm có thể là nhật ký trải nghiệm, kế hoạch cá nhân, poster hoặc bài trình bày.
+
+- Âm nhạc:
+Nội dung phải thể hiện:
++ Kiến thức âm nhạc, giai điệu, nhịp điệu và tiết tấu.
++ Kỹ năng hát, nghe nhạc, vận động theo nhạc hoặc biểu diễn.
++ Cảm nhận và thể hiện cảm xúc âm nhạc.
++ Hoạt động luyện tập cá nhân và nhóm.
++ Sản phẩm có thể là bài hát, phần biểu diễn hoặc nhận xét cảm nhận âm nhạc.
+
+- Mĩ thuật:
+Nội dung phải thể hiện:
++ Kiến thức về màu sắc, hình khối, bố cục và yếu tố tạo hình.
++ Quy trình sáng tạo sản phẩm nghệ thuật.
++ Kỹ năng quan sát, thực hành và trình bày ý tưởng.
++ Khuyến khích sự sáng tạo và thẩm mỹ.
++ Sản phẩm có thể là tranh, mô hình, thiết kế hoặc bài giới thiệu sản phẩm.
+
+- Tin học:
+Nội dung phải thể hiện:
++ Kiến thức về công nghệ thông tin và kỹ năng số.
++ Quy trình sử dụng phần mềm, thiết bị hoặc công cụ số.
++ Thực hành tạo sản phẩm số.
++ Đảm bảo an toàn, đạo đức trong môi trường số.
++ Sản phẩm có thể là tệp tin, bài trình chiếu, chương trình hoặc sản phẩm số.
 Không tạo nội dung chung chung.
 Phải thể hiện kiến thức, kỹ năng đặc thù của bài học.
 `;
@@ -271,6 +403,20 @@ if(durationText.includes("phút")){
   let storyboard = "";
   let imagePrompt = "";
   let lessonPlan = "";
+  lessonPlan = `
+MÔN HỌC:
+${subject}
+
+LỚP:
+${grade}
+
+CHỦ ĐỀ:
+${topic}
+
+YÊU CẦU ĐẶC THÙ MÔN HỌC:
+${subjectInstruction}
+
+`;
 const sceneRoles = [
   "Khởi động – tạo hứng thú",
   "Khám phá kiến thức mới",

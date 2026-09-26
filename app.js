@@ -745,6 +745,20 @@ if(tableHTML){
 
 const table = new docx.Table({
 
+    width: {
+        size: 100,
+        type: docx.WidthType.PERCENTAGE
+    },
+
+    borders: {
+        top: { style: "single", size: 1, color: "000000" },
+        bottom: { style: "single", size: 1, color: "000000" },
+        left: { style: "single", size: 1, color: "000000" },
+        right: { style: "single", size: 1, color: "000000" },
+        insideHorizontal: { style: "single", size: 1, color: "000000" },
+        insideVertical: { style: "single", size: 1, color: "000000" }
+    },
+
     rows: rows.map(row =>
 
         new docx.TableRow({

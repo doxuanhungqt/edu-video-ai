@@ -282,7 +282,7 @@ if(start === -1) return "";
 
 const content = subjectInstruction.substring(start);
 
-const next = content.indexOf("\n\n- ");
+const next = content.search(/\n\s*-\s+/);
 
 return next === -1 ? content : content.substring(0,next);
 

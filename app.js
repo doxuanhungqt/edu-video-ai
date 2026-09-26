@@ -821,6 +821,8 @@ if(getEl("exportWordBtn")){
 
     getEl("exportWordBtn").onclick = function(){
 
+      console.log("EXPORT WORD CLICK");
+
         const content = getEl("output").innerText;
 
         const blob = new Blob(

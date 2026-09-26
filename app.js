@@ -203,6 +203,17 @@ else if (audience.includes("Giáo viên")) {
   const topic = getEl("topic").value;
   const purpose = getEl("purpose").value;
  const durationText = getEl("duration").value;
+  let topicKnowledge = "";
+  if(subject.includes("Toán")){
+
+if(topic.includes("Phân số")){
+
+topicKnowledge =
+"Kiến thức trọng tâm: Khái niệm phân số, tử số, mẫu số, phân số bằng nhau, so sánh phân số, quy đồng mẫu số và vận dụng giải bài toán.";
+
+}
+
+}
 
   subjectInstruction = `
 
@@ -415,6 +426,8 @@ ${topic}
 
 YÊU CẦU ĐẶC THÙ MÔN HỌC:
 ${subjectInstruction}
+KIẾN THỨC TRỌNG TÂM:
+${topicKnowledge}
 
 `;
 const sceneRoles = [

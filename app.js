@@ -722,27 +722,46 @@ document.addEventListener("click", function(e){
    if(e.target.closest("#exportWordBtn")){
         console.log("EXPORT WORD CLICK");
 
-        const content = getEl("output").innerText;
+       const content = getEl("output").innerText;
 
-        const blob = new Blob(
-            [content],
-            {type:"application/msword"}
-        );
+const doc = new docx.Document({
+    sections: [
+        {
+            properties: {},
+            children: [
+                new docx.Paragraph({
+                    children: [
+                        new docx.TextRun({
+                            text: content,
+                            font: "Times New Roman",
+                            size: 24
+                        })
+                    ]
+                })
+            ]
+        }
+    ]
+});
 
-        const url = URL.createObjectURL(blob);
 
-        const a = document.createElement("a");
+docx.Packer.toBlob(doc).then(blob => {
 
-        a.href = url;
-        a.download = "Giao_an_AI.doc";
+    const url = URL.createObjectURL(blob);
 
-        document.body.appendChild(a);
+    const a = document.createElement("a");
 
-        a.click();
+    a.href = url;
+    a.download = "Giao_an_AI.docx";
 
-        document.body.removeChild(a);
+    document.body.appendChild(a);
 
-        URL.revokeObjectURL(url);
+    a.click();
+
+    document.body.removeChild(a);
+
+    URL.revokeObjectURL(url);
+
+});
 
         alert("✅ Đã xuất giáo án Word AI!");
     }

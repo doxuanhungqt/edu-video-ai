@@ -603,7 +603,6 @@ if(durationText.includes("phút")){
 topicKnowledge = generateTopicKnowledge();
 console.log(topicKnowledge);
 }
-  }
 
 videoScript = `
 Xây dựng kịch bản video AI:

@@ -213,7 +213,35 @@ else if (audience.includes("Giáo viên")) {
  const durationText = getEl("duration").value;
   let topicKnowledge = "";
   let currentSubjectInstruction = "";
+  let subjectRule = "";
   let topicPrompt = "";
+
+  if(subject.includes("Giáo dục thể chất")){
+
+    subjectRule =
+    `
+    Phân tích theo đặc trưng Giáo dục thể chất:
+    - Xác định kỹ thuật hoặc động tác trọng tâm.
+    - Nêu các giai đoạn thực hiện kỹ thuật.
+    - Nêu tư thế chuẩn bị và cách thực hiện.
+    - Chỉ ra lỗi thường gặp và cách sửa.
+    - Xác định tiêu chí đánh giá kỹ năng vận động.
+    `;
+
+}
+
+else if(subject.includes("Toán")){
+
+    subjectRule =
+    `
+    Phân tích theo đặc trưng môn Toán:
+    - Nêu khái niệm, tính chất, quy tắc.
+    - Trình bày quy trình tư duy giải quyết vấn đề.
+    - Có ví dụ minh họa.
+    - Có bài tập vận dụng.
+    `;
+
+}
 
   function generateTopicKnowledge(){
 
@@ -228,13 +256,19 @@ Chủ đề: ${topic}
 
 ${currentSubjectInstruction}
 
-Hãy xác định kiến thức trọng tâm của bài học.
+Định hướng suy luận môn học:
+
+${subjectRule}
+
+Hãy phân tích nội dung bài học để xây dựng video giáo dục.
 
 Yêu cầu:
-- Đúng đặc trưng môn học.
-- Phù hợp với học sinh lớp ${grade}.
+- Xác định kiến thức cốt lõi cần truyền tải trong video.
+- Xác định các thao tác, kỹ thuật, quy trình hoặc hiện tượng cần minh họa.
+- Xác định các bước/diễn biến chính của nội dung bài học.
+- Đề xuất các hình ảnh, hoạt động hoặc tình huống cần xuất hiện trong video.
+- Nội dung phù hợp với học sinh lớp ${grade}.
 - Không viết chung chung.
-- Nêu rõ kiến thức và kỹ năng cốt lõi.
 `;
 
 }

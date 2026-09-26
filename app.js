@@ -866,6 +866,20 @@ ${studentActivity}
 </p>
 
 <p>
+🎥 <b>Nội dung video:</b><br>
+${lessonContent}
+</p>
+
+<p>
+🎬 <b>Mục đích video:</b><br>
+${videoGoal}
+</p>
+
+<p>
+🖼️ <b>Hình ảnh tạo video:</b><br>
+${imagePrompt}
+</p>
+<p>
 📌 <b>Sản phẩm học tập:</b><br>
 ${learningProduct}
 </p>

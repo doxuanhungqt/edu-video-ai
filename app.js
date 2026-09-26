@@ -224,6 +224,10 @@ Môn học: ${subject}
 Lớp: ${grade}
 Chủ đề: ${topic}
 
+Đặc trưng môn học:
+
+${currentSubjectInstruction}
+
 Hãy xác định kiến thức trọng tâm của bài học.
 
 Yêu cầu:

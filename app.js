@@ -9,7 +9,11 @@ function renderLessonPlanTable(plan) {
 
   if (!box) return;
 
-  const activities = plan.split("--------------------");
+ const parts = plan.split("----------------");
+
+const activities = parts.slice(1);
+  
+  const lessonInfo = parts[0];
 
   let rows = "";
 
@@ -72,6 +76,10 @@ function renderLessonPlanTable(plan) {
 
 
   box.innerHTML = `
+  
+<div class="lesson-info">
+${lessonInfo.replace(/\n/g,"<br>")}
+</div>
 
   <table class="lesson-table">
 

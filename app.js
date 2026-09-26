@@ -808,7 +808,7 @@ const doc = new docx.Document({
                 new docx.Paragraph({
                     children: [
                         new docx.TextRun({
-                            text: title.join("\n"),
+                            text: "",
                             font: "Times New Roman",
                             size: 24
                         })

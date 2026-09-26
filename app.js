@@ -1096,7 +1096,6 @@ renderLessonPlanTable(lessonPlan);
 
   }
 
-}
 
 async function loadVideos() {
   const box = getEl("videoList"); if (!box) return; box.innerHTML = "<p class='muted'>Đang tải kho video...</p>";

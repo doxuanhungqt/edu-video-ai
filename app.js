@@ -212,6 +212,7 @@ else if (audience.includes("Giáo viên")) {
   const purpose = getEl("purpose").value;
  const durationText = getEl("duration").value;
   let topicKnowledge = "";
+  let currentSubjectInstruction = "";
   if(subject.includes("Toán")){
 
 if(topic.includes("Phân số")){
@@ -222,7 +223,70 @@ topicKnowledge =
 }
 
 }
+function getSubjectInstruction(subject){
 
+let key = "";
+
+if(subject.includes("Toán")){
+    key = "- Toán học:";
+}
+
+else if(subject.includes("Giáo dục thể chất")){
+    key = "- Giáo dục thể chất:";
+}
+
+else if(subject.includes("Tiếng Anh")){
+    key = "- Tiếng Anh:";
+}
+
+else if(subject.includes("Hóa")){
+    key = "- Hóa học:";
+}
+
+else if(subject.includes("Sinh")){
+    key = "- Sinh học:";
+}
+
+else if(subject.includes("Vật")){
+    key = "- Vật lí:";
+}
+
+else if(subject.includes("Lịch sử")){
+    key = "- Lịch sử:";
+}
+
+else if(subject.includes("Địa")){
+    key = "- Địa lí:";
+}
+
+else if(subject.includes("Công nghệ")){
+    key = "- Công nghệ:";
+}
+
+else if(subject.includes("Tin")){
+    key = "- Tin học:";
+}
+
+else if(subject.includes("Kinh tế")){
+    key = "- Giáo dục kinh tế và pháp luật (THPT):";
+}
+
+else{
+    return "";
+}
+
+
+const start = subjectInstruction.indexOf(key);
+
+if(start === -1) return "";
+
+const content = subjectInstruction.substring(start);
+
+const next = content.indexOf("\n\n- ");
+
+return next === -1 ? content : content.substring(0,next);
+
+}
   subjectInstruction = `
 
 YÊU CẦU ĐẶC THÙ MÔN HỌC:
@@ -387,6 +451,8 @@ Không tạo nội dung chung chung.
 Phải thể hiện kiến thức, kỹ năng đặc thù của bài học.
 `;
 
+currentSubjectInstruction = getSubjectInstruction(subject);
+
 let duration = 60;
 
 if(durationText.includes("giây")){
@@ -433,7 +499,7 @@ CHỦ ĐỀ:
 ${topic}
 
 YÊU CẦU ĐẶC THÙ MÔN HỌC:
-${subjectInstruction}
+${currentSubjectInstruction}
 KIẾN THỨC TRỌNG TÂM:
 ${topicKnowledge}
 

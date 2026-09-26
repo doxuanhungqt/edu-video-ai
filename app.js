@@ -894,7 +894,11 @@ ${role}
 
 Educational level:
 Grade ${grade}
+Lesson content:
+${lessonContent}
 
+Video purpose:
+${videoGoal}
 Audience:
 ${audience}
 

@@ -719,8 +719,7 @@ if(getEl("copyPromptBtn")){
   
 document.addEventListener("click", function(e){
 
-    if(e.target && e.target.id === "exportWordBtn"){
-
+   if(e.target.closest("#exportWordBtn")){
         console.log("EXPORT WORD CLICK");
 
         const content = getEl("output").innerText;

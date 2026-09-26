@@ -273,25 +273,21 @@ let teacherFeedback = "";
 scenePurpose =
 "Gây hứng thú, tạo kết nối và giới thiệu bài học.";
     teacherActivity =
-"Giáo viên giới thiệu chủ đề, tạo tình huống mở đầu và đặt câu hỏi gợi mở.";
+`Giáo viên giới thiệu chủ đề ${topic} trong môn ${subject}, hướng dẫn học sinh chuẩn bị kiến thức và kỹ năng cần thiết cho bài học.`;
 
 studentActivity =
-"Học sinh quan sát, lắng nghe và chia sẻ hiểu biết ban đầu.";
-
+`Học sinh lớp ${grade} quan sát, trao đổi hiểu biết ban đầu về ${topic} và tham gia hoạt động khởi động phù hợp với môn ${subject}.`;
 learningProduct =
-"Ý kiến ban đầu, câu trả lời hoặc dự đoán của học sinh.";
+`Ý kiến ban đầu, câu trả lời hoặc sản phẩm chuẩn bị liên quan đến chủ đề ${topic}.`;
 
     assessmentCriteria =
-"Học sinh tham gia hoạt động, thể hiện sự chú ý và chia sẻ ý kiến ban đầu.";
-
+`Học sinh thể hiện sự hiểu biết ban đầu về ${topic}, tích cực tham gia hoạt động và chia sẻ ý kiến.`;
 assessmentQuestion =
-"Em biết gì về chủ đề bài học hôm nay?";
-
+`Em biết gì về ${topic} trong môn ${subject}?`;
 teacherFeedback =
-"Giáo viên khuyến khích, ghi nhận ý kiến và dẫn dắt vào bài học.";
-
+`Giáo viên nhận xét ý kiến của học sinh về ${topic}, bổ sung kiến thức ban đầu và dẫn dắt vào bài học.`;
     learningObjective =
-"Nhận biết chủ đề, hình thành sự chú ý và sẵn sàng tham gia bài học.";
+`Học sinh lớp ${grade} bước đầu tiếp cận chủ đề ${topic} trong môn ${subject}, tạo hứng thú và chuẩn bị cho hoạt động học tập.`;
 
     }
     
@@ -304,24 +300,22 @@ else if(role.includes("Khám phá")) {
 "Hình thành kiến thức mới, giúp học sinh khám phá nội dung bài học.";
 
   learningObjective =
-"Hiểu kiến thức mới, giải thích được nội dung trọng tâm của bài học.";
+`Học sinh lớp ${grade} khám phá và hiểu các kiến thức trọng tâm về ${topic} trong môn ${subject}, giải thích được nội dung cốt lõi của bài học.`;
  teacherActivity =
-"Giáo viên hướng dẫn học sinh quan sát, đặt câu hỏi và khám phá kiến thức mới.";
+`Giáo viên hướng dẫn học sinh tìm hiểu ${topic}, sử dụng phương pháp phù hợp của môn ${subject}, đặt câu hỏi và hỗ trợ học sinh hình thành kiến thức mới.`;
 
 studentActivity =
-"Học sinh thảo luận, tìm hiểu thông tin và hình thành kiến thức.";
-
+`Học sinh lớp ${grade} quan sát, thảo luận, tìm hiểu nội dung ${topic} và hình thành kiến thức, kỹ năng của môn ${subject}.`;
 learningProduct =
-"Câu trả lời, ghi chép kiến thức hoặc kết quả khám phá."; 
+`Câu trả lời, ghi chép hoặc sản phẩm học tập thể hiện sự hiểu biết về ${topic}.`;
 
   assessmentCriteria =
-"Học sinh hiểu nội dung mới, tham gia thảo luận và giải thích được kiến thức.";
+`Học sinh hiểu được nội dung ${topic}, trình bày ý kiến, giải thích và vận dụng kiến thức của môn ${subject}.`;
 
 assessmentQuestion =
-"Em hãy trình bày kiến thức mới vừa khám phá.";
-
+`Em hãy trình bày những kiến thức quan trọng về ${topic} mà em vừa khám phá.`;
 teacherFeedback =
-"Giáo viên nhận xét, bổ sung và hướng dẫn học sinh hoàn thiện kiến thức.";
+`Giáo viên nhận xét, bổ sung kiến thức về ${topic} và hướng dẫn học sinh hoàn thiện hiểu biết trong môn ${subject}.`;
 }
 
 else if(role.includes("Minh họa")) {
@@ -333,24 +327,23 @@ else if(role.includes("Minh họa")) {
 "Làm rõ kiến thức bằng hình ảnh, ví dụ và hướng dẫn trực quan.";
 
   learningObjective =
-"Phân tích, quan sát và hiểu rõ kiến thức thông qua ví dụ minh họa.";
+`Học sinh lớp ${grade} phân tích, quan sát và hiểu rõ cách thực hiện ${topic} thông qua ví dụ minh họa trong môn ${subject}.`;
 teacherActivity =
-"Giáo viên trình bày ví dụ, minh họa kiến thức và hướng dẫn cách thực hiện.";
+`Giáo viên minh họa nội dung ${topic}, hướng dẫn kỹ thuật, thao tác hoặc cách giải quyết nhiệm vụ phù hợp với môn ${subject}.`;
 
 studentActivity =
-"Học sinh quan sát, phân tích ví dụ và rút ra kiến thức.";
+`Học sinh lớp ${grade} quan sát, phân tích ví dụ về ${topic}, trao đổi và rút ra kiến thức, kỹ năng cần thiết.`;
 
 learningProduct =
-"Phiếu học tập, câu trả lời hoặc phần trình bày của học sinh.";  
-
+`Phiếu học tập, phần trình bày hoặc sản phẩm thể hiện sự hiểu biết về ${topic}.`;
+  
   assessmentCriteria =
-"Học sinh nhận diện được nội dung minh họa, giải thích được ví dụ và liên hệ kiến thức.";
-
+`Học sinh giải thích được ví dụ về ${topic}, thực hiện đúng yêu cầu và liên hệ kiến thức trong môn ${subject}.`;
 assessmentQuestion =
-"Ví dụ minh họa giúp em hiểu thêm điều gì?";
+`Ví dụ minh họa giúp em hiểu thêm điều gì về ${topic}?`;
 
 teacherFeedback =
-"Giáo viên nhận xét cách hiểu, giải thích thêm và điều chỉnh sai sót.";
+`Giáo viên nhận xét cách hiểu của học sinh về ${topic}, giải thích thêm và điều chỉnh những điểm chưa chính xác.`;
 }
 
 else if(role.includes("Thực hành")) {
@@ -362,24 +355,22 @@ else if(role.includes("Thực hành")) {
 "Tổ chức hoạt động luyện tập, trải nghiệm và vận dụng.";
 
   learningObjective =
-"Vận dụng kiến thức vào thực hành, giải quyết nhiệm vụ và tạo sản phẩm học tập.";
+`Học sinh lớp ${grade} vận dụng kiến thức về ${topic} trong môn ${subject}, thực hiện đúng yêu cầu kỹ thuật, rèn luyện kỹ năng và hoàn thành nhiệm vụ học tập.`;
 teacherActivity =
-"Tổ chức hoạt động luyện tập, giao nhiệm vụ và hỗ trợ học sinh thực hành.";
+`Giáo viên tổ chức hoạt động thực hành về ${topic}, hướng dẫn kỹ thuật, quan sát quá trình luyện tập và hỗ trợ học sinh điều chỉnh sai sót.`;
 
 studentActivity =
-"Học sinh thực hiện nhiệm vụ, hợp tác nhóm và vận dụng kiến thức.";
-
+`Học sinh lớp ${grade} thực hành ${topic}, phối hợp với bạn học, vận dụng kiến thức và hoàn thiện kỹ năng của môn ${subject}.`;
 learningProduct =
-"Sản phẩm thực hành, bài trình bày hoặc kết quả hoạt động nhóm."; 
+`Kết quả thực hành, phần trình bày hoặc sản phẩm thể hiện kỹ năng về ${topic}.`;
 
   assessmentCriteria =
-"Học sinh vận dụng được kiến thức, hoàn thành nhiệm vụ và tạo sản phẩm học tập.";
-
+`Học sinh thực hiện được yêu cầu của ${topic}, vận dụng đúng kiến thức và cải thiện kỹ năng trong môn ${subject}.`;
 assessmentQuestion =
-"Em hãy trình bày cách em đã thực hiện nhiệm vụ.";
+`Em hãy trình bày cách em thực hiện và những kỹ thuật quan trọng khi học ${topic}.`;
 
 teacherFeedback =
-"Giáo viên nhận xét kết quả, hướng dẫn điều chỉnh và khuyến khích vận dụng.";
+`Giáo viên nhận xét quá trình thực hiện ${topic}, hướng dẫn học sinh sửa lỗi kỹ thuật và khuyến khích vận dụng vào thực tế.`;
 }
 
 else if(role.includes("Tổng kết")) {
@@ -391,24 +382,22 @@ else if(role.includes("Tổng kết")) {
 "Củng cố kiến thức, ghi nhớ nội dung trọng tâm.";
 
   learningObjective =
-"Củng cố kiến thức, đánh giá kết quả học tập và ghi nhớ nội dung chính.";
+`Học sinh lớp ${grade} hệ thống lại kiến thức về ${topic} trong môn ${subject}, tự đánh giá kết quả học tập và ghi nhớ những nội dung quan trọng.`;
 teacherActivity =
-"Giáo viên nhận xét, đánh giá kết quả và củng cố kiến thức trọng tâm.";
+`Giáo viên nhận xét kết quả học tập về ${topic}, củng cố kiến thức trọng tâm và hướng dẫn học sinh vận dụng trong thực tế.`;
 
 studentActivity =
-"Học sinh chia sẻ kết quả, tự đánh giá và ghi nhớ kiến thức.";
-
+`Học sinh lớp ${grade} chia sẻ kết quả thực hiện ${topic}, tự đánh giá quá trình học tập và ghi nhớ kiến thức của môn ${subject}.`;
 learningProduct =
-"Kết quả học tập, phần trình bày hoặc nội dung ghi nhớ cuối bài.";  
+`Phần trình bày, kết quả học tập hoặc nội dung ghi nhớ về ${topic} cuối bài học.`;
 
   assessmentCriteria =
-"Học sinh tổng hợp được kiến thức, tự đánh giá kết quả và ghi nhớ nội dung trọng tâm.";
+`Học sinh tổng hợp được kiến thức về ${topic}, đánh giá được kết quả học tập và vận dụng kiến thức của môn ${subject}.`;
 
 assessmentQuestion =
-"Em hãy nêu lại những kiến thức quan trọng nhất của bài học.";
-
+`Em hãy nêu lại những kiến thức quan trọng nhất về ${topic}.`;
 teacherFeedback =
-"Giáo viên nhận xét, đánh giá và định hướng vận dụng kiến thức vào thực tế.";
+`Giáo viên nhận xét, đánh giá kết quả học tập về ${topic} và định hướng học sinh vận dụng kiến thức vào thực tế.`;
 }
     lessonPlan += `
 HOẠT ĐỘNG: ${role}

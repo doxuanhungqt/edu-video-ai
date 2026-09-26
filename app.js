@@ -724,20 +724,103 @@ document.addEventListener("click", function(e){
 
        const content = getEl("output").innerText;
 
+const lines = content.split("\n").filter(x => x.trim() !== "");
+
+let title = [];
+let tableRows = [];
+
+let startTable = lines.findIndex(x => x.includes("Hoạt động"));
+
+if (startTable !== -1) {
+    title = lines.slice(0, startTable);
+
+    const body = lines.slice(startTable + 6);
+
+    tableRows.push([
+        "Hoạt động",
+        "Mục tiêu",
+        "Giáo viên",
+        "Học sinh",
+        "Sản phẩm",
+        "Đánh giá"
+    ]);
+
+    for (let i = 0; i < body.length; i += 6) {
+        tableRows.push([
+            body[i] || "",
+            body[i + 1] || "",
+            body[i + 2] || "",
+            body[i + 3] || "",
+            body[i + 4] || "",
+            body[i + 5] || ""
+        ]);
+    }
+}
+
+
+const table = new docx.Table({
+    rows: tableRows.map(row =>
+        new docx.TableRow({
+            children: row.map(cell =>
+                new docx.TableCell({
+                    children: [
+                        new docx.Paragraph({
+                            children: [
+                                new docx.TextRun({
+                                    text: cell,
+                                    font: "Times New Roman",
+                                    size: 22
+                                })
+                            ]
+                        })
+                    ]
+                })
+            )
+        })
+    )
+});
+
+
 const doc = new docx.Document({
     sections: [
         {
-            properties: {},
             children: [
+
+                new docx.Paragraph({
+                    alignment: docx.AlignmentType.CENTER,
+                    children: [
+                        new docx.TextRun({
+                            text: "STORYBOARD AI",
+                            bold: true,
+                            font: "Times New Roman",
+                            size: 32
+                        })
+                    ]
+                }),
+
                 new docx.Paragraph({
                     children: [
                         new docx.TextRun({
-                            text: content,
+                            text: title.join("\n"),
                             font: "Times New Roman",
                             size: 24
                         })
                     ]
-                })
+                }),
+
+                new docx.Paragraph({
+                    alignment: docx.AlignmentType.CENTER,
+                    children: [
+                        new docx.TextRun({
+                            text: "KẾ HOẠCH BÀI DẠY AI",
+                            bold: true,
+                            font: "Times New Roman",
+                            size: 28
+                        })
+                    ]
+                }),
+
+                table
             ]
         }
     ]

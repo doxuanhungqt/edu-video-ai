@@ -120,6 +120,7 @@ function generate() {
   let audienceStyle = "";
 let recommendedVoice = "";
   let subjectStyle = "";
+  let subjectInstruction = "";
   if (subject.includes("Tiếng Anh")) {
 
   subjectStyle =
@@ -202,6 +203,38 @@ else if (audience.includes("Giáo viên")) {
   const topic = getEl("topic").value;
   const purpose = getEl("purpose").value;
  const durationText = getEl("duration").value;
+
+  subjectInstruction = `
+
+YÊU CẦU ĐẶC THÙ MÔN HỌC:
+
+Môn học: ${subject}
+Lớp: ${grade}
+Chủ đề: ${topic}
+
+Nội dung kế hoạch bài dạy phải thể hiện đúng đặc trưng môn học:
+
+- Giáo dục thể chất:
+Tập trung vào kỹ thuật vận động, tư thế, thao tác, luyện tập, sửa lỗi và đánh giá kỹ năng.
+
+- Toán học:
+Tập trung vào khái niệm, công thức, quy trình giải và bài tập vận dụng.
+
+- Tiếng Anh:
+Tập trung vào từ vựng, cấu trúc câu, phát âm, nghe, nói, đọc, viết.
+
+- Tiếng Việt/Ngữ văn:
+Tập trung vào đọc hiểu, phân tích, viết và cảm thụ.
+
+- Khoa học/KHTN:
+Tập trung vào quan sát, thí nghiệm, giải thích hiện tượng và vận dụng.
+
+- Lịch sử/Địa lí:
+Tập trung vào sự kiện, nhân vật, bản đồ, phân tích và liên hệ thực tế.
+
+Không tạo nội dung chung chung.
+Phải thể hiện kiến thức, kỹ năng đặc thù của bài học.
+`;
 
 let duration = 60;
 
@@ -431,6 +464,7 @@ imagePrompt =
 "Grade: " + grade + ". " +
 "Audience: " + audience + ". " +
   "Subject style: " + subjectStyle + ". " +
+  "Subject instruction: " + subjectInstruction + ". " +
   "Scene style: " + sceneImageStyle + ". " +
 "Characters: Vietnamese students, appropriate age, suitable school uniforms, happy expressions, natural poses, teacher guiding students. " +
 "Location: Vietnamese school environment. " +

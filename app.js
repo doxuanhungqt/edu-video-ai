@@ -313,7 +313,9 @@ if(subject.includes("Toán")){
 else if(subject.includes("Giáo dục thể chất")){
     key = "- Giáo dục thể chất:";
 }
-
+else if(subject.includes("Hoạt động trải nghiệm")){
+   key = "- Hoạt động trải nghiệm, hướng nghiệp:";
+}
 else if(subject.includes("Tiếng Anh")){
     key = "- Tiếng Anh:";
 }

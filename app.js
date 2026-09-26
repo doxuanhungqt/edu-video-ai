@@ -716,35 +716,39 @@ if(getEl("copyPromptBtn")){
   };
  
 // Xuất giáo án Word AI
+  
+document.addEventListener("click", function(e){
 
-if(getEl("exportWordBtn")){
+    if(e.target && e.target.id === "exportWordBtn"){
 
-  getEl("exportWordBtn").onclick = function(){
+        console.log("EXPORT WORD CLICK");
 
-    const content = getEl("output").innerText;
+        const content = getEl("output").innerText;
 
-    const blob = new Blob(
-      [content],
-      {type:"application/msword"}
-    );
+        const blob = new Blob(
+            [content],
+            {type:"application/msword"}
+        );
 
-    const url = URL.createObjectURL(blob);
+        const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
+        const a = document.createElement("a");
 
-    a.href = url;
-    a.download = "Giao_an_AI.doc";
+        a.href = url;
+        a.download = "Giao_an_AI.doc";
 
-    a.click();
+        document.body.appendChild(a);
 
-    URL.revokeObjectURL(url);
+        a.click();
 
-    alert("✅ Đã xuất giáo án Word AI!");
+        document.body.removeChild(a);
 
-  };
+        URL.revokeObjectURL(url);
 
-} 
-}
+        alert("✅ Đã xuất giáo án Word AI!");
+    }
+
+});
 // Mở Canva với Prompt hình ảnh
 if(getEl("canvaBtn")){
   getEl("canvaBtn").onclick = function(){

@@ -584,9 +584,8 @@ ${topic}
 
 YÊU CẦU ĐẶC THÙ MÔN HỌC:
 ${currentSubjectInstruction}
-KIẾN THỨC TRỌNG TÂM:
+NỘI DUNG VIDEO AI:
 ${topicKnowledge}
-
 `;
 const sceneRoles = [
   "Khởi động – tạo hứng thú",

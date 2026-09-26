@@ -1140,9 +1140,13 @@ if(getEl("exportWordBtn")){
       console.log("EXPORT WORD CLICK");
 
         const content = getEl("output").innerText;
+      
+      const lessonTable = getEl("lessonPlanTable").innerText;
+
+      console.log(lessonTable);
 
         const blob = new Blob(
-            [content],
+           [lessonTable],
             {type:"application/msword"}
         );
 
